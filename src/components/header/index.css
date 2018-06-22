@@ -1,0 +1,47 @@
+.wrap {
+    height: 44px;
+    z-index: 2;
+    padding: 0 40px;
+    padding-top: 40px;
+}
+.logo {
+     float: left;
+    margin-left: 12px;
+    margin-top: 7px;
+}
+.logo img{
+    height: 30px;
+}
+.sider {
+    float: right;
+    width: 70px;
+    height: 44px;
+    background-image: url("./Menu.png");
+    background-size: 40px 22px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.navlist{
+    width: 160px;
+    height: 40px;
+
+
+}
+.navlist a{
+    display: block;
+    color: #fff;
+    background-color: #656b6f;
+    font-size: 16px;
+    text-align: center;
+}
+.wrap.absolute {
+    position: absolute;
+    width: 100%;
+}
+.wrap.relative {
+    position: relative;
+}
+.wrap.otherStyle {
+    color: #656b6f;
+    background: #fff;
+}
