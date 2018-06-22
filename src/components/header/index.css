@@ -4,6 +4,7 @@
     padding: 0 40px;
     padding-top: 40px;
 }
+
 .logo {
      float: left;
     margin-left: 12px;
@@ -24,8 +25,6 @@
 .navlist{
     width: 160px;
     height: 40px;
-
-
 }
 .navlist a{
     display: block;
@@ -44,4 +43,19 @@
 .wrap.otherStyle {
     color: #656b6f;
     background: #fff;
+}
+@media screen and (max-width: 750px) {
+    .wrap {
+        padding-left: 5px ;
+        padding-right: 16px;
+        padding-top: 10px;
+    }
+    .sider {
+        width: 35px;
+        height: 22px;
+        background-size: 20px 11px;
+    }
+    .logo img{
+        height: 20px;
+    }
 }

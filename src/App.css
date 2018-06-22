@@ -32,7 +32,6 @@ a {
     display: inline-block;
     color: inherit;
     text-decoration: none;
-    margin: 0px 25px;
 
     -webkit-transition: all 0.2s;
     -o-transition: all 0.2s;
@@ -57,13 +56,18 @@ button {
 
 .first {
     background-image: url("./images/banner.png");
-    height: 100%;
+    height: 1000px;
+    background-position: center;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .second {
     background-color: #fff;
-    height: 100%;
+    height: 1000px;
     padding-top: 70px;
+    display: block;
 }
 
 .secongContent {
@@ -116,7 +120,9 @@ button {
 
 .third {
     background-image: url("./images/sectionBg.png");
-    height: 100%;
+    height: 1000px;
+    background-position: center;
+    display: block;
 }
 
 .thirdContent {
@@ -144,8 +150,9 @@ button {
 }
 
 .fourth {
-    height: 100%;
+    height: 1000px;
     background-color: #FAFAFA;
+    display: block;
 }
 
 .fourthContent {
@@ -238,13 +245,11 @@ button {
     -moz-osx-font-smoothing: grayscale;
 }
 .fifth{
-    height: 100%;
+    height: 1000px;
     background-color: #fff;
+    display: block;
 }
-.fifth{
-    height: 100%;
-    background-color: #fff;
-}
+
 .fifthContent{
     width: 1200px;
     margin: 0 auto;
@@ -356,5 +361,167 @@ button {
 }
 .button[disabled]{
     opacity: 0.5;
+    cursor: no-drop;
 }
 
+@media screen and (max-width: 750px) {
+    .first {
+        background-image: url("./images/bannerM.png");
+        height: 195px;
+        background-size: cover;
+    }
+    .second {
+        padding-top: 30px;
+        height: auto;
+        padding-bottom: 50px;
+    }
+    .secongContent{
+        width: 100%;
+        padding: 0 16px;
+    }
+    .secongContentB {
+        margin-top: 20px;
+    }
+    .secongHeaderT {
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .secongHeaderB {
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .secongContentBI {
+        width: 24px;
+        height: 24px;
+
+    }
+    .secongContentBT {
+        font-size: 18px;
+        color: #3B3D40;
+        display: block;
+        line-height: 24px;
+        margin-bottom: 10px;
+    }
+
+    .secongContentBC {
+        font-size: 14px;
+        line-height: 22px;
+        color: #989898;
+        display: block;
+        width: 100%;
+    }
+    .third {
+        height: auto;
+        padding-bottom: 50px;
+    }
+    .thirdContent {
+        width: 100%;
+        padding: 0 16px;
+        padding-top: 30px;
+    }
+    .thirdContentT {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .thirdContentC {
+        font-size: 14px;
+        line-height: 24px;
+
+    }
+    .fourth {
+        height: auto;
+        padding-bottom: 40px;
+    }
+    .fourthContent{
+        width: 100%;
+        padding: 0 16px;
+        padding-top: 30px;
+    }
+    .fourthHeaderT {
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 16px;
+    }
+
+    .fourthHeaderC {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 10px;
+    }
+    .fourthContentLiCC{
+        width: 100%;
+        margin-top: 10px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .fourthContentLi{
+        margin-top: 40px;
+    }
+    .fourthContentLiCHI{
+        margin-left: 10px;
+    }
+    .fifth{
+        height: 830px;
+    }
+    .fifthContent{
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+    .fifthHeaderT{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .fifthHeaderC{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .fifthContentCLT{
+        font-size: 14px
+    }
+    .fifthContentC{
+        margin-top: 40px;
+        padding: 0 16px;
+    }
+    .fifthContentCL{
+
+        width: 100%;
+    }
+    .fifthContentCR{
+        width: 100%;
+        padding-left: 0;
+    }
+    .fifthContentCLTA{
+
+        width: 100%;
+        height: 180px;
+        float: left;
+        font: 400 18px Arial;
+    }
+    .fifthContentCLTI{
+        width: 100%;
+        height: 60px;
+        float: left;
+    }
+    .fifthContentCLTID{
+
+        width:100%;
+
+    }
+    .fifthContentCLTBox1{
+       float: none;
+    }
+    .button{
+        width:100%;
+
+    }
+
+}
+@media screen and (max-width: 375px) {
+    .first {
+
+        background-size: contain;
+        background-position:0 0;
+    }
+}
