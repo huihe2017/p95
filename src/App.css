@@ -41,9 +41,8 @@ a {
 
 a.active,
 a:hover {
-    color: #C44D58;
+    color: #5262ff;
 }
-
 button {
     width: 50px;
     padding: 8px;
@@ -358,3 +357,4 @@ button {
 .button[disabled]{
     opacity: 0.5;
 }
+
