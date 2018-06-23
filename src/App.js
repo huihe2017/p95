@@ -13,7 +13,7 @@ class App extends Component {
     }
 
     componentWillMount() {
-        window.location.hash = 'sectionOne'
+
     }
 
     submit() {
@@ -52,36 +52,8 @@ class App extends Component {
     }
 
     render() {
-        let options = {
-            sectionClassName: 'section',
-            anchors: ['sectionOne', 'sectionTwo', 'sectionThree', 'sectionFour', 'sectionFive'],
-            scrollBar: false,
-            navigation: true,
-            verticalAlign: false,
-            arrowNavigation: true
-        };
-
-        // if (this.state.message) {
-        //     // alert(1)
-        // }
-        // if ( /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/.test(this.state.email)) {
-        //     alert(2)
-        // }
-        // if (/^[A-Za-z\u4e00-\u9fa5]+$/.test(this.state.name)) {
-        //     console.log(3)
-        // }
-
         return (
-            <div>
-
-
-                <a href="#sectionOne" className="opa">Section One</a>
-                <a href="#sectionTwo">Section Two</a>
-                <a href="#sectionThree">Section Three</a>
-                <a href="#sectionFour">Section Three</a>
-                <a href="#sectionFive">Section Three</a>
-
-
+            <div id="main">
                 <a className='first' name="sectionOne">
                     <Hheader/>
                 </a>
@@ -187,6 +159,22 @@ Point95 uses a proprietary quantitative investment style to search for and filte
                                         </span>
                             </div>
                         </div>
+                        <div className='logoBox'>
+
+                                <img className='logoBoxT' src="" alt=""/>
+                                <img className='logoBoxT' src="" alt=""/>
+                                <img className='logoBoxT' src="" alt=""/>
+                                <img className='logoBoxT' src="" alt=""/>
+                                <img className='logoBoxT'src="" alt=""/>
+                                <img className='logoBoxT'  src="" alt=""/>
+                                <img className='logoBoxT' src="" alt=""/>
+                                <img className='logoBoxT' src="" alt=""/>
+                                <img className='logoBoxT' src="" alt=""/>
+
+
+
+
+                        </div>
                     </div>
                 </a>
 
@@ -233,7 +221,7 @@ Point95 uses a proprietary quantitative investment style to search for and filte
                                         }} type="text"/>
                                     </div>
                                     <button className="button"
-                                            onClick={() => this.submit()}>
+                                            onClick={() => this.submit()} disabled={!this.state.disable}>
                                         SEND
                                     </button>
                                 </div>

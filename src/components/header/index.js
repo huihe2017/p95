@@ -5,7 +5,7 @@ class Header extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            open: false,
+            isHide: false,
             position: 'relative',
             otherStyle: true
 
@@ -61,33 +61,25 @@ class Header extends React.Component {
         }
     }
 
-    componentWillUnmount() {
+    componentWillMount() {
+        if(!this.state.isHide){
+            console.log(111)
+            window.addEventListener('scroll',()=>{this.show()})
 
+        }
+    }
+    show() {
+        this.setState({isHide: false})
     }
 
+
+
     onOpenChange = (...args) => {
-        console.log(args);
-        this.setState({open: !this.state.open});
+        this.setState({isHide: !this.state.isHide});
     }
 
     render() {
-        const Array = [ {label: '首页', link: '/'}, {label: '产品交易', link: '/forexPresentation'}, {
-            label: '交易平台',
-            link: '/tradingPlatform'
-        }, {label: '关于海豚汇', link: '/aboutUs'}, {label: '海豚学院', link: '/school'}, {
-            label: '账户出金',
-            link: '/outgold'
-        }, {label: '账户入金', link: '/ingold'}, {label: '用户资料', link: '/detailUserMsg'}, {
-            label: '更改密码',
-            link: '/modifyPwd'
-        }, {label: '历史记录', link: '/history'}]
-        const sidebar = (<ul style={{paddingTop: 20}}>
-            {Array.map((i, index) => {
-                return (<li className={style.navlist} key={index}>
-                    {i.label}
-                </li>);
-            })}
-        </ul>);
+
         return (
             <div className='wrap'>
                 <div className='logo'>
@@ -96,7 +88,7 @@ class Header extends React.Component {
                 <div onClick={this.onOpenChange} className='sider'>
 
                 </div>
-                {this.state.open?<SideBar/>:''}
+                <SideBar click={()=>this.show()} show={this.state.isHide}/>
             </div>
         )
     }

@@ -12,53 +12,57 @@ class SideBar extends Component {
 
     }
 
-    checkedForPath(sidePath) {
-
+    checkedForPath() {
+        this.props.click()
     }
 
+
     render() {
-        // let isHide = this.props.show ? '' : style.hide
+        let isHide = this.props.show ? '' : 'hide'
+        let isHide1 = this.props.show ? '' : 'hide1'
 
         return (
             <div>
-                <div className={style.sideBar }>
+                <div  className={`mask ${isHide1}`} style={{height:window.screen.availHeight,width:document.body.clientWidth}} onClick={() => {
+                    this.checkedForPath()
+                }}>
+                </div>
+                <div className={`sideBar ${isHide}`} style={{height:window.screen.availHeight}}>
+                    <div className='logo1'>
+                        <img src={require("../logo.png")}/>
+                    </div>
                     <a href="#sectionOne">
-                        <div className={(() => {
-                            return this.checkedForPath('/')
-                        })()}>首页
+                        <div onClick={() => {
+                           this.checkedForPath()
+                        }}>HOME
                         </div>
                     </a>
+
                     <a href="#sectionTwo">
-                        <div className={(() => {
-                            return this.checkedForPath('/ProductDeal')
-                        })()}>产品交易
+                        <div onClick={() => {
+                            this.checkedForPath('/ProductDeal')
+                        }}>Asset Management
                         </div>
                     </a>
                     <a href="#sectionThree">
-                        <div className={(() => {
-                            return this.checkedForPath('/DealTerrace')
-                        })()}>交易平台
+                        <div onClick={ ()=> {
+                           this.checkedForPath()
+                        }}>Market Making
                         </div>
                     </a>
                     <a href="#sectionFour">
-                        <div className={(() => {
-                            return this.checkedForPath('/aboutUs')
-                        })()}>关于海豚汇
+                        <div onClick={() => {
+                            this.checkedForPath()
+                        }}>The Team
                         </div>
                     </a>
                     <a href="#sectionFive">
-                        <div className={(() => {
-                            return this.checkedForPath('/DolphinSchool')
-                        })()}>合伙人计划
+                        <div onClick={() => {
+                             this.checkedForPath()
+                        }}>Contact us
                         </div>
                     </a>
-
-
-
-
-
                 </div>
-
             </div>
         )
     }

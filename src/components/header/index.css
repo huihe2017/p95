@@ -6,7 +6,7 @@
 }
 
 .logo {
-     float: left;
+    float: left;
     margin-left: 12px;
     margin-top: 7px;
 }
@@ -21,6 +21,8 @@
     background-size: 40px 22px;
     background-repeat: no-repeat;
     background-position: center;
+    position: relative;
+    z-index: 3;
 }
 .navlist{
     width: 160px;
