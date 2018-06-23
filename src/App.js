@@ -17,7 +17,30 @@ class App extends Component {
     }
 
     submit() {
-        alert(1)
+
+        var data = 'mail=' + this.state.email + '&userName=' + this.state.name + '&message=' + this.state.message
+
+        fetch("http://www.p95g.com/api/user/sendmsg", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: data
+        }).then(res => res.json()).then(res => {
+            if(res.code === 0){
+                alert('发送成功')
+            }
+        });
+
+        // var xhr = new XMLHttpRequest();
+        // // xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        // xhr.open('post', 'http://www.p95g.com/api/user/sendmsg' );
+        // xhr.send({rr:2,tt:5});
+        // xhr.onreadystatechange = function () {
+        //     if (xhr.readyState == 4 && xhr.status == 200) {
+        //         console.log(xhr.responseText);
+        //     }
+        // };
     }
 
     check() {
@@ -52,11 +75,11 @@ class App extends Component {
             <div>
 
 
-                    <a href="#sectionOne" className="opa">Section One</a>
-                    <a href="#sectionTwo">Section Two</a>
-                    <a href="#sectionThree">Section Three</a>
-                    <a href="#sectionFour">Section Three</a>
-                    <a href="#sectionFive">Section Three</a>
+                <a href="#sectionOne" className="opa">Section One</a>
+                <a href="#sectionTwo">Section Two</a>
+                <a href="#sectionThree">Section Three</a>
+                <a href="#sectionFour">Section Three</a>
+                <a href="#sectionFive">Section Three</a>
 
 
                 <a className='first' name="sectionOne">
@@ -93,7 +116,7 @@ Point95 uses a proprietary quantitative investment style to search for and filte
                     </div>
                 </a>
 
-                <a className='third'  name="sectionThree">
+                <a className='third' name="sectionThree">
                     <div className="thirdContent">
                                 <span className="thirdContentT">
                                     Market Making
@@ -167,7 +190,7 @@ Point95 uses a proprietary quantitative investment style to search for and filte
                     </div>
                 </a>
 
-                <a className='fifth'  name="sectionFive">
+                <a className='fifth' name="sectionFive">
                     <div className="fifthContent">
                                 <span className="fifthHeaderT">
                                     Contact <span style={{color: '#5262ff'}}>us</span>
@@ -209,7 +232,7 @@ Point95 uses a proprietary quantitative investment style to search for and filte
                                             })
                                         }} type="text"/>
                                     </div>
-                                    <button className="button" disabled={!this.state.disable}
+                                    <button className="button"
                                             onClick={() => this.submit()}>
                                         SEND
                                     </button>

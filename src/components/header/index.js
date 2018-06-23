@@ -94,8 +94,9 @@ class Header extends React.Component {
                     <img src={require("./logo.png")}/>
                 </div>
                 <div onClick={this.onOpenChange} className='sider'>
+
                 </div>
-                {/*<SideBar/>*/}
+                {this.state.open?<SideBar/>:''}
             </div>
         )
     }

@@ -1,34 +1,41 @@
-.sideBar {
+:local(.sideBar) {
     width: 420px;
     position: fixed;
-    right: 0px;
+    left: 0px;
+    top:0;
     transition: right 0.5s, 0.5s ease-out;
     background-color: rgba(59, 61, 64, 0.5);
 
 }
 
-.sideBar a {
+:local(.sideBar a) {
     color: #fff;
+    display: block;
 
 }
 
-.sideBar.hide {
+:local(.sideBar.hide) {
     right: -420px;
 }
 
-.sideBar div {
+:local(.sideBar div) {
     line-height: 60px;
     font-size: 18px;
     text-align: left;
     padding-left: 30px;
 }
 
-.sideBar div:hover {
+:local(.sideBar div:hover) {
     background: rgba(54, 59, 93, 0.5);
 }
 
-.sideBar div.checked {
+:local(.sideBar div.checked) {
 
 }
 
+@media screen and (max-width: 750px) {
+    :local(.sideBar) {
+        width: 220px;
 
+    }
+}
