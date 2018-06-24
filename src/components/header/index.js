@@ -83,8 +83,13 @@ class Header extends React.Component {
                 <div className='logo'>
                     <img src={require("./logo.png")}/>
                 </div>
+
                 <div onClick={this.onOpenChange} className='sider'>
 
+                </div>
+                <div className="cn">
+                    <span className="cnSpan">中 </span>/
+                    <span className="cnSpan"> EN</span>
                 </div>
                 <SideBar click={()=>this.show()} show={this.state.isHide}/>
             </div>

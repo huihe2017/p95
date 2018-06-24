@@ -24,6 +24,15 @@
     position: relative;
     z-index: 3;
 }
+.cn {
+    float: right;
+    height: 44px;
+    line-height: 44px;
+    font-size: 30px;
+    margin-right: 20px;
+    color: #fff;
+}
+
 .navlist{
     width: 160px;
     height: 40px;
@@ -45,6 +54,22 @@
 .wrap.otherStyle {
     color: #656b6f;
     background: #fff;
+}
+.cnSpan{
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    width: 44px;
+}
+.cnSpan:last-child{
+    text-align: right;
+}
+.cnSpan:hover{
+    color: #5262ff;
+}
+.cnSpan:active{
+    color: #5262ff!important;
+    font-weight: bold!important;
 }
 @media screen and (max-width: 750px) {
     .wrap {
