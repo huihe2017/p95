@@ -11,6 +11,7 @@ class Header extends React.Component {
 
         }
         this.choceType = this.choceType.bind(this)
+		this.LangChange = this.LangChange.bind(this)
 
 
     }
@@ -75,6 +76,9 @@ class Header extends React.Component {
     onOpenChange = (...args) => {
         this.setState({isHide: !this.state.isHide});
     }
+	LangChange(lang){
+		this.props.LangChange(lang)
+	}
 
     render() {
 
@@ -88,10 +92,10 @@ class Header extends React.Component {
 
                 </div>
                 <div className="cn">
-                    <span className="cnSpan">中 </span>/
-                    <span className="cnSpan"> EN</span>
+                    <span onClick={()=>{this.LangChange('ch')}} className="cnSpan">中 </span>/
+                    <span onClick={()=>{this.LangChange('en')}} className="cnSpan"> EN</span>
                 </div>
-                <SideBar click={()=>this.show()} show={this.state.isHide}/>
+                <SideBar lang={this.props.lang} click={()=>this.show()} show={this.state.isHide}/>
             </div>
         )
     }

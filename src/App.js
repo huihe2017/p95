@@ -4,20 +4,28 @@ import './App.css';
 import {SectionsContainer, Section, Header, Footer} from 'react-fullpage';
 import Hheader from './components/header';
 
-const word = [
-    {
-        firstTitle: 'Asset Management Page'
-    },
-    {
-        firstTitle: '资管业务'
+
+const en = 
+{
+        firstTitleL: 'Asset',
+		firstTitleR:'Management',
+		front:'home'
     }
-]
+
+const ch = 
+{
+        firstTitleL: '资管',
+		firstTitleR:'业务',
+		front:'首页'
+    }
+
 
 class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            disable: false
+            disable: false,
+			lang:'en'
         }
     }
 
@@ -60,20 +68,32 @@ class App extends Component {
         }
     }
 
+	LangChange(lang){
+		this.setState({
+                lang
+            })
+	}
+	
     render() {
+		let lang;
+		if(this.state.lang==='en'){
+			lang = en
+		}else{
+			lang = ch
+		}
         return (
             <div id="main">
                 <a className='first' name="sectionOne">
-                    <Hheader/>
+                    <Hheader lang={lang} LangChange={this.LangChange.bind(this)} />
                 </a>
 
                 <a className='second' name="sectionTwo">
                     <div className="secongContent">
                         <span className='secongHeaderT'>
-                            Asset
+						{lang.firstTitleL}
                         </span>
                         <span className='secongHeaderB'>
-                                      Management
+                                      {lang.firstTitleR}
                                 </span>
                         <div className='secongContentB'>
                             <img className='secongContentBI' src={require('./images/house.png')} alt=""/>

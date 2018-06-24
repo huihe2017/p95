@@ -20,7 +20,7 @@ class SideBar extends Component {
     render() {
         let isHide = this.props.show ? '' : 'hide'
         let isHide1 = this.props.show ? '' : 'hide1'
-
+alert(this.props.lang)
         return (
             <div>
                 <div  className={`mask ${isHide1}`} style={{height:window.screen.availHeight,width:document.body.clientWidth}} onClick={() => {
@@ -34,7 +34,7 @@ class SideBar extends Component {
                     <a href="#sectionOne">
                         <div onClick={() => {
                            this.checkedForPath()
-                        }}>HOME
+                        }}>{this.props.lang.front}
                         </div>
                     </a>
 
