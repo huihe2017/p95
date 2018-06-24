@@ -4,6 +4,15 @@ import './App.css';
 import {SectionsContainer, Section, Header, Footer} from 'react-fullpage';
 import Hheader from './components/header';
 
+const word = [
+    {
+        firstTitle: 'Asset Management Page'
+    },
+    {
+        firstTitle: '资管业务'
+    }
+]
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -27,7 +36,7 @@ class App extends Component {
             },
             body: data
         }).then(res => res.json()).then(res => {
-            if(res.code === 0){
+            if (res.code === 0) {
                 alert('发送成功')
             }
         });
@@ -60,9 +69,9 @@ class App extends Component {
 
                 <a className='second' name="sectionTwo">
                     <div className="secongContent">
-                                <span className='secongHeaderT'>
-                                      Asset
-                                </span>
+                        <span className='secongHeaderT'>
+                            Asset
+                        </span>
                         <span className='secongHeaderB'>
                                       Management
                                 </span>
@@ -111,7 +120,8 @@ Point95 uses a proprietary quantitative investment style to search for and filte
                             <img className='fourthContentLiI' src={require('./images/boss.png')} alt=""/>
                             <div className="fourthContentLiC">
                                         <span className="fourthContentLiCH">
-                                            <span className="fourthContentLiCHS">Jingyuan Ye,  CFA
+                                            <span className="fourthContentLiCHS">Jingyuan Ye,  CFA <span
+                                                className="fourthContentLiCHSL"> -Point95 Global CEO and Co-Founder</span>
                                             </span>
                                             <a className="fourthContentLiCHA"
                                                href="https://www.linkedin.com/in/jingyuan-ye-75b6b128/"
@@ -120,6 +130,7 @@ Point95 uses a proprietary quantitative investment style to search for and filte
                                                 className="iconfont">&#xe631;</i></a>
                                         </span>
                                 <span className="fourthContentLiCC">
+
                                             Jingyuan has over 10 years of experience in financial serviceindustry. He joined Bank of America Merrill Lynch in London 2007 as the Vice President of Global Market Division, where he was responsible for the risk and portfolio management of OTC and listed equity structured products for EMEA. Currently he is the CEO and a co-founder of Point95 Global.
 
 
@@ -130,7 +141,8 @@ Point95 uses a proprietary quantitative investment style to search for and filte
                             <img className='fourthContentLiI' src={require('./images/lin.png')} alt=""/>
                             <div className="fourthContentLiC">
                                         <span className="fourthContentLiCH">
-                                            <span className="fourthContentLiCHS">Lin Cheung
+                                            <span className="fourthContentLiCHS">Lin Cheung<span
+                                                className="fourthContentLiCHSL"> -Point95 Global COO and Co-Founder</span>
                                             </span>
                                             <a className="fourthContentLiCHA"
                                                href="https://www.linkedin.com/in/lin-cheung-b4a77386/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_top%3BEkL2LE9jREi1FUiWHtXZ5g%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_search_srp_top-search_srp_result&lici=GH4fPH7gTmmoVSM8%2Fq8NCw%3D%3D"
@@ -147,7 +159,8 @@ Point95 uses a proprietary quantitative investment style to search for and filte
                             <img className='fourthContentLiI' src={require('./images/wang.png')} alt=""/>
                             <div className="fourthContentLiC">
                                         <span className="fourthContentLiCH">
-                                            <span className="fourthContentLiCHS">Mike Wang
+                                            <span className="fourthContentLiCHS">Mike Wang<span
+                                                className="fourthContentLiCHSL"> -Point95 Global CIO and Co-Founder </span>
                                             </span>
                                             <a className="fourthContentLiCHA" href="javascript:void (0)"
                                                target="view_window"><img className="fourthContentLiCHI"
@@ -161,18 +174,33 @@ Point95 uses a proprietary quantitative investment style to search for and filte
                         </div>
                         <div className='logoBox'>
 
-                                <img className='logoBoxT' src="" alt=""/>
-                                <img className='logoBoxT' src="" alt=""/>
-                                <img className='logoBoxT' src="" alt=""/>
-                                <img className='logoBoxT' src="" alt=""/>
-                                <img className='logoBoxT'src="" alt=""/>
-                                <img className='logoBoxT'  src="" alt=""/>
-                                <img className='logoBoxT' src="" alt=""/>
-                                <img className='logoBoxT' src="" alt=""/>
-                                <img className='logoBoxT' src="" alt=""/>
-
-
-
+                            <div>
+                                <img className='logoBoxT' src={require('./images/4.png')} alt=""/>
+                            </div>
+                            <div>
+                                <img className='logoBoxT' src={require('./images/7.png')} alt=""/>
+                            </div>
+                            <div>
+                                <img className='logoBoxT' src={require('./images/3.png')} alt=""/>
+                            </div>
+                            <div>
+                                <img className='logoBoxT' src={require('./images/5.png')} alt=""/>
+                            </div>
+                            <div>
+                                <img className='logoBoxT' src={require('./images/6.png')} alt=""/>
+                            </div>
+                            <div>
+                                <img className='logoBoxT' src={require('./images/9.png')} alt=""/>
+                            </div>
+                            <div>
+                                <img className='logoBoxT' src={require('./images/2.png')} alt=""/>
+                            </div>
+                            <div>
+                                <img className='logoBoxT' src={require('./images/1.png')} alt=""/>
+                            </div>
+                            <div>
+                                <img className='logoBoxT' src={require('./images/8.png')} alt=""/>
+                            </div>
 
                         </div>
                     </div>

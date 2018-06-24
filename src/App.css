@@ -202,6 +202,11 @@ button {
     display: block;
 
 }
+.fourthContentLiCH:after {
+    display: block;
+    clear: both;
+    content: '';
+}
 .fourthContentLiCHS {
     color: #989898;
     font-size: 16px;
@@ -230,6 +235,7 @@ button {
     font-size: 16px;
     line-height: 30px;
 }
+
 @font-face {
     font-family: 'iconfont';  /* project id 717126 */
     src: url('https://at.alicdn.com/t/font_717126_9gwfkeke57a.eot');
@@ -246,21 +252,29 @@ button {
     -moz-osx-font-smoothing: grayscale;
 }
 .logoBox{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap:wrap;
+    width: 1100px;
+
+}
+.logoBox:after{
+    display: block;
+    clear: both;
+    content: '';
+}
+.logoBox>div{
+   width: 16.6%;
+   float: left;
 }
 .logoBoxT{
     display: block;
-    width: 80px;
-    height: 60px;
+    margin: 0 auto;
+    width: 132px;
+    height: 80px;
     background-color: #0e80d2;
-    float: left;
-
     margin-top: 40px;
 }
-
+.fourthContentLiCHSL{
+    font-weight: lighter;
+}
 
 
 .fifth{
@@ -479,6 +493,17 @@ button {
     }
     .fourthContentLiCHI{
         margin-left: 10px;
+    }
+    .fourthContentLiCHSL{
+        display: block;
+    }
+    .logoBox{
+        width:100%;
+
+    }
+    .logoBox>div{
+        width: 50%;
+        float: left;
     }
     .fifth{
         height: 830px;

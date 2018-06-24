@@ -63,9 +63,7 @@ class Header extends React.Component {
 
     componentWillMount() {
         if(!this.state.isHide){
-            console.log(111)
             window.addEventListener('scroll',()=>{this.show()})
-
         }
     }
     show() {
