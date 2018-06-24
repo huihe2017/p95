@@ -9,6 +9,8 @@
     float: left;
     margin-left: 12px;
     margin-top: 7px;
+    position: relative;
+    z-index: 7;
 }
 .logo img{
     height: 30px;
@@ -29,7 +31,7 @@
     height: 44px;
     line-height: 44px;
     font-size: 30px;
-    margin-right: 20px;
+    margin-right: 40px;
     color: #fff;
 }
 
@@ -63,11 +65,12 @@
 }
 .cnSpan:last-child{
     text-align: right;
+    width: 50px;
 }
 .cnSpan:hover{
     color: #5262ff;
 }
-.cnSpan:active{
+.ative{
     color: #5262ff!important;
     font-weight: bold!important;
 }
@@ -84,5 +87,23 @@
     }
     .logo img{
         height: 20px;
+    }
+    .cn {
+        float: right;
+        height: 22px;
+        line-height: 22px;
+        font-size: 15px;
+        margin-right: 16px;
+        color: #fff;
+    }
+    .cnSpan{
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        width: 22px;
+    }
+    .cnSpan:last-child{
+        text-align: right;
+        width: 25px;
     }
 }

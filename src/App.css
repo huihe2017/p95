@@ -150,9 +150,10 @@ button {
 }
 
 .fourth {
-    height: 1000px;
+    height: auto;
     background-color: #FAFAFA;
     display: block;
+    padding-bottom: 60px;
 }
 
 .fourthContent {
@@ -252,8 +253,8 @@ button {
     -moz-osx-font-smoothing: grayscale;
 }
 .logoBox{
-    width: 1100px;
-
+    width: 1200px;
+    margin-top: 10px;
 }
 .logoBox:after{
     display: block;
@@ -261,16 +262,16 @@ button {
     content: '';
 }
 .logoBox>div{
-   width: 16.6%;
-   float: left;
+    width: 16.6%;
+    float: left;
+    margin-top: 30px;
 }
 .logoBoxT{
     display: block;
-    margin: 0 auto;
     width: 132px;
     height: 80px;
     background-color: #0e80d2;
-    margin-top: 40px;
+
 }
 .fourthContentLiCHSL{
     font-weight: lighter;
@@ -504,6 +505,9 @@ button {
     .logoBox>div{
         width: 50%;
         float: left;
+    }
+    .logoBoxT{
+       margin: 0 auto;
     }
     .fifth{
         height: 830px;

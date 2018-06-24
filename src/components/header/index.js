@@ -92,10 +92,10 @@ class Header extends React.Component {
 
                 </div>
                 <div className="cn">
-                    <span onClick={()=>{this.LangChange('ch')}} className="cnSpan">中 </span>/
-                    <span onClick={()=>{this.LangChange('en')}} className="cnSpan"> EN</span>
+                    <span onClick={()=>{this.LangChange('ch')}} className={`cnSpan ${this.props.language=='en'?'':'ative'}`}>中 </span>/
+                    <span onClick={()=>{this.LangChange('en')}} className={`cnSpan ${this.props.language=='en'?'ative':''}`}> EN</span>
                 </div>
-                <SideBar lang={this.props.lang} click={()=>this.show()} show={this.state.isHide}/>
+                <SideBar language={this.props.language} lang={this.props.lang} click={()=>this.show()} show={this.state.isHide}/>
             </div>
         )
     }

@@ -27,9 +27,6 @@ class SideBar extends Component {
                 }}>
                 </div>
                 <div className={`sideBar ${isHide}`} style={{height:window.screen.availHeight}}>
-                    <div className='logo1'>
-                        <img src={require("../logo.png")}/>
-                    </div>
                     <a href="#sectionOne">
                         <div onClick={() => {
                            this.checkedForPath()
@@ -40,29 +37,30 @@ class SideBar extends Component {
                     <a href="#sectionTwo">
                         <div onClick={() => {
                             this.checkedForPath('/ProductDeal')
-                        }}>Asset Management
+                        }}>{this.props.lang.firstSTitleL}{this.props.language=='en'?' ':''}{this.props.lang.firstSTitleR}
                         </div>
                     </a>
                     <a href="#sectionThree">
                         <div onClick={ ()=> {
                            this.checkedForPath()
-                        }}>Market Making
+                        }}>{this.props.lang.thirdPartT}
                         </div>
                     </a>
                     <a href="#sectionFour">
                         <div onClick={() => {
                             this.checkedForPath()
-                        }}>The Team
+                        }}>{this.props.lang.fourthPartTTF}{this.props.language=='en'?' ':''}{this.props.lang.fourthPartTTL}
                         </div>
                     </a>
                     <a href="#sectionFive">
                         <div onClick={() => {
                              this.checkedForPath()
-                        }}>Contact us
+                        }}>{this.props.lang.fifthPartTT}{this.props.language=='en'?' ':''}{this.props.lang.fifthPartTC}
                         </div>
                     </a>
                 </div>
             </div>
+
         )
     }
 }
