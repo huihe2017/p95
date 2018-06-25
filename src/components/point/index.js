@@ -5,42 +5,41 @@ import style from './index.css'
 class Point extends Component {
     render() {
         return (
-            <div>
+            <div className='allWrap'>
+                    <a className='point1' href={'/#sectionTwo'}>
+                    <div className='itemWrap'>
 
-                <div class='allWrap'>
-                    <a href={'/#sectionTwo'}>
-                    <div class='itemWrap point1'>
-
-                        <div class="flexWrap">
-                            <div class="imgWrap"><img src={require('./point.png')}/></div>
-                            <div class="pWrap"><p class="p">Asset Management</p></div>
-                            <div class="pLast">Specializing in Digital Assets Management</div>
+                        <div className="flexWrap">
+                            <div className="imgWrap"><img src={require('./point.png')}/></div>
+                            <div className="pWrap"><p className={`p ${this.props.language == 'en' ?'p1':'p2'}`}>{this.props.lang.firstTitleL}{this.props.language=='en'?' ':''}{this.props.lang.firstSTitleR}</p></div>
+                            <div className="pLast">{this.props.lang.firstSP}</div>
                         </div>
                     </div>
                     </a>
-                    <a href={'/#sectionTwo'}>
-                        <div class='itemWrap point2'>
 
-                            <div class="flexWrap">
-                                <div class="imgWrap"><img src={require('./point.png')}/></div>
-                                <div class="pWrap"><p class="p">Market Making</p></div>
-                                <div class="pLast">Best Service Provider in Marketing Making</div>
+                    <a className='point2' href={'/#sectionTwo'}>
+                        <div className='itemWrap '>
+
+                            <div className="flexWrap">
+                                <div className="imgWrap"><img src={require('./point.png')}/></div>
+                                <div className="pWrap"><p className={`p ${this.props.language == 'en' ?'p1':'p2'}`}>{this.props.lang.thirdPartTL}{this.props.language=='en'?' ':''}{this.props.lang.thirdPartTR}</p></div>
+                                <div className="pLast">{this.props.lang.thirdPartTP}</div>
                             </div>
                         </div>
                     </a>
-                    <a href={'/#sectionTwo'}>
-                        <div class='itemWrap point3'>
+                    <a className='point3' href={'/#sectionTwo'}>
+                        <div className='itemWrap '>
 
-                            <div class="flexWrap">
-                                <div class="imgWrap"><img src={require('./point.png')}/></div>
-                                <div class="pWrap"><p class="p">Contact Us</p></div>
-                                <div class="pLast">Partnership and Careers</div>
+                            <div className="flexWrap">
+                                <div className="imgWrap"><img src={require('./point.png')}/></div>
+                                <div className="pWrap"><p className={`p ${this.props.language == 'en' ?'p1':'p2'}`}>{this.props.lang.fifthPartTT}{this.props.language=='en'?' ':''}{this.props.lang.fifthPartTC}</p></div>
+                                <div className="pLast">{this.props.lang.fifthPartTP}</div>
                             </div>
                         </div>
                     </a>
                 </div>
 
-            </div>
+
         )
     }
 }

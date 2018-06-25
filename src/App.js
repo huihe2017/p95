@@ -11,6 +11,7 @@ const en =
         firstTitleR: 'Management',
         firstSTitleL: 'Asset',
         firstSTitleR: 'Management',
+        firstSP: 'Specializing in Digital Assets Management',
         front: 'Home',
         secondFPartT: 'Company',
         secondFPartCF: 'Point95 Global is a digital asset management company that specializes in quantitative trading in digital assets. With the goal of providing “best-in-class” digital asset investment vehicles.',
@@ -18,6 +19,9 @@ const en =
         secondSPartT: 'Strategies',
         secondSPartC: 'Point95 Global employs low risk quantitative trading strategies to exact constant and stable alpha returns in volatile digital asset markets. In addition, Point95 Global utilizes state-of-the-art proprietary software and advanced valuation models that allow our trading algorithms to be one of the most competitive in the major crypto-currencies.',
         thirdPartT: 'Market Making',
+        thirdPartTL: 'Market',
+        thirdPartTR: 'Making',
+        thirdPartTP: 'Best Service Provider in Marketing Making',
         thirdPartC: 'Point95 Global is dedicated to provide market making services including:',
         thirdPartCP1: 'provision of liquidity',
         thirdPartCP2: 'price stabilization',
@@ -38,6 +42,7 @@ const en =
         fourthSTPartCC: "Mike has extensive experience in quantitative trading. He was a director of CITIC Securities and responsible for managing quantitative strategies, marking-making strategies and arbitrage strategies in stock markets. He graduated with a Master’s degree in Computer Science from Zhejiang University, China.",
         fifthPartTT: 'Contact',
         fifthPartTC: 'Us',
+        fifthPartTP: 'Partnership and Careers',
         fifthPartAddress: 'Level 6, Champion Tower, Three Garden Road, Central, Hong Kong SAR',
         fifthPartAddressB: 'E-mail us at:',
         fifthPartFT: 'YOUR MASSAGE',
@@ -52,6 +57,7 @@ const ch =
         firstTitleR: '业务',
         firstSTitleL: '资管',
         firstSTitleR: '业务',
+        firstSP: '专注于数字资产管理',
         front: '首页',
         secondFPartT: '公司',
         secondFPartCF: 'Point95 Global 是一所数字资产管理公司，专门从事数字资产量化交易，并坚持以提供业内“最优级”数字资产投资工具作为目标。',
@@ -59,6 +65,9 @@ const ch =
         secondSPartT: '策略',
         secondSPartC: 'Point95 Global采用低风险的量化交易策略，在动荡的数字资本市场中确保持续和稳定的alpha收益。同时Point95 Global应用最先进的专有交易软件和估值模型，使得Point95 Global的交易算法在主要的数字货币交易市场中保持核心竞争优势。',
         thirdPartT: '做市商业务',
+        thirdPartTL: '做市商',
+        thirdPartTR: '业务',
+        thirdPartTP: '专注于数字资产管理',
         thirdPartC: 'Point95 Global 致力于提供优质的做市商服务，其中包括提供：',
         thirdPartCP1: '交易市场流动性管理',
         thirdPartCP2: '稳定市值价格',
@@ -79,6 +88,7 @@ const ch =
         fourthSTPartCC: 'Mike中国浙江大学计算机科学硕士，曾担任中信证券董事，在量化交易方面有多年的经验。在中信证券的工作中负责管理股票市场的量化策略、做市策略和套利策略。现联合创立Point95 Global并出任CIO。',
         fifthPartTT: '联系',
         fifthPartTC: '我们',
+        fifthPartTP: '商务合作，人才招聘',
         fifthPartAddress: '香港中环花园道3号冠君大厦6楼',
         fifthPartAddressB: '联系我们：',
         fifthPartFT: '你的信息',
@@ -158,13 +168,12 @@ class App extends Component {
             <div id="main">
                 <Hheader language={this.state.lang} lang={lang} LangChange={this.LangChange.bind(this)}/>
                 <a className={`first ${this.state.lang == 'en' ?'bg':'bgC'}`} name="sectionOne">
-                    <div style={{width:1200,margin:'0 auto'}} >
+                    <div className='pointBox' >
                         <div style={{position:'relative'}} >
-                            <Point></Point>
+                            <Point language={this.state.lang} lang={lang}></Point>
                         </div>
                     </div>
                 </a>
-
                 <a className='second' name="sectionTwo">
                     <div className="secongContent">
                         <span className='secongHeaderT'>

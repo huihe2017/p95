@@ -61,6 +61,10 @@ button {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.pointBox{
+    width: 1200px;
+    margin: 0 auto;
+}
 .bg {
     background-image: url("./images/banner.png");
 }
@@ -459,7 +463,7 @@ button {
 }
 .button:hover{
     opacity: 0.7;
-    transition: all 0.3s;
+    transition: all 0.5s, 0.5s ease-out
 }
 .button[disabled]{
     opacity: 0.5;
@@ -471,6 +475,9 @@ button {
         background-image: url("./images/bannerM.png");
         height: 195px;
         background-size: cover;
+    }
+    .pointBox{
+       display: none;
     }
     .second {
         padding-top: 20px;
@@ -591,11 +598,14 @@ button {
         float: none;
         margin: 0 auto;
     }
-    .fourthContentLiCH{
-        position: relative;
-    }
     .fourthContentLiCHI{
-        margin-left: 10px;
+
+        display: inline-block;
+        margin-right: 8px;
+    }
+    .iconfont{
+        margin-top: 2px;
+        float: right;
     }
     .fourthContentLiCHS{
         margin: 0 auto;
@@ -607,9 +617,11 @@ button {
         display: block;
     }
     .fourthContentLiCHA{
-        position: absolute;
-        top: 0;
-        right: 0;
+        display: block;
+        margin: 0 auto;
+        width: 46px;
+        text-align: center;
+        margin-top: 5px;
     }
     .logoBox{
         width:100%;
