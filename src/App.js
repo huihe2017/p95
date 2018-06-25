@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import {SectionsContainer, Section, Header, Footer} from 'react-fullpage';
 import Hheader from './components/header';
-
+import Point from './components/point';
 
 const en =
     {
@@ -158,7 +158,11 @@ class App extends Component {
             <div id="main">
                 <Hheader language={this.state.lang} lang={lang} LangChange={this.LangChange.bind(this)}/>
                 <a className={`first ${this.state.lang == 'en' ?'bg':'bgC'}`} name="sectionOne">
-
+                    <div style={{width:1200,margin:'0 auto'}} >
+                        <div style={{position:'relative'}} >
+                            <Point></Point>
+                        </div>
+                    </div>
                 </a>
 
                 <a className='second' name="sectionTwo">
