@@ -317,45 +317,78 @@ class App extends Component {
                                         </span>
                             </div>
                         </div>
-                        <div className='logoBox'>
+                        {/*<div className='logoBox'>*/}
 
-                            <a href="http://www.ox.ac.uk/"
-                               target="view_window">
-                                <img className='logoBoxT' src={require('./images/4.png')} alt=""/>
-                            </a>
-                            <a href="https://www.hku.hk/"
-                               target="view_window">
-                                <img className='logoBoxT' src={require('./images/7.png')} alt=""/>
-                            </a>
-                            <a href="http://www.zju.edu.cn/"
-                               target="view_window">
-                                <img className='logoBoxT' src={require('./images/3.png')} alt=""/>
-                            </a>
-                            <a href="http://www.fudan.edu.cn/2016/index.html"
-                               target="view_window">
-                                <img className='logoBoxT' src={require('./images/5.png')} alt=""/>
-                            </a>
-                            <a href="http://www.tsinghua.edu.cn/publish/thu2018/index.html"
-                               target="view_window">
-                                <img className='logoBoxT' src={require('./images/6.png')} alt=""/>
-                            </a>
-                            <a href="http://www.jpmorganchina.com.cn/country/CN/zh/jpmorgan"
-                               target="view_window">
-                                <img className='logoBoxT' src={require('./images/9.png')} alt=""/>
-                            </a>
-                            <a href="http://www.cs.ecitic.com/newsite/"
-                               target="view_window">
-                                <img className='logoBoxT' src={require('./images/2.png')} alt=""/>
-                            </a>
-                            <a href="https://www.ml.com/"
-                               target="view_window">
-                                <img className='logoBoxT' src={require('./images/1.png')} alt=""/>
-                            </a>
-                            <a href=" http://www.morganstanley.com/"
-                               target="view_window">
-                                <img className='logoBoxT' src={require('./images/8.png')} alt=""/>
-                            </a>
+                            {/*<a href="http://www.ox.ac.uk/"*/}
+                               {/*target="view_window">*/}
+                                {/*<img className='logoBoxT' src={require('./images/4.png')} alt=""/>*/}
+                            {/*</a>*/}
+                            {/*<a href="https://www.hku.hk/"*/}
+                               {/*target="view_window">*/}
+                                {/*<img className='logoBoxT' src={require('./images/7.png')} alt=""/>*/}
+                            {/*</a>*/}
+                            {/*<a href="http://www.zju.edu.cn/"*/}
+                               {/*target="view_window">*/}
+                                {/*<img className='logoBoxT' src={require('./images/3.png')} alt=""/>*/}
+                            {/*</a>*/}
+                            {/*<a href="http://www.fudan.edu.cn/2016/index.html"*/}
+                               {/*target="view_window">*/}
+                                {/*<img className='logoBoxT' src={require('./images/5.png')} alt=""/>*/}
+                            {/*</a>*/}
+                            {/*<a href="http://www.tsinghua.edu.cn/publish/thu2018/index.html"*/}
+                               {/*target="view_window">*/}
+                                {/*<img className='logoBoxT' src={require('./images/6.png')} alt=""/>*/}
+                            {/*</a>*/}
+                            {/*<a href="http://www.jpmorganchina.com.cn/country/CN/zh/jpmorgan"*/}
+                               {/*target="view_window">*/}
+                                {/*<img className='logoBoxT' src={require('./images/9.png')} alt=""/>*/}
+                            {/*</a>*/}
+                            {/*<a href="http://www.cs.ecitic.com/newsite/"*/}
+                               {/*target="view_window">*/}
+                                {/*<img className='logoBoxT' src={require('./images/2.png')} alt=""/>*/}
+                            {/*</a>*/}
+                            {/*<a href="https://www.ml.com/"*/}
+                               {/*target="view_window">*/}
+                                {/*<img className='logoBoxT' src={require('./images/1.png')} alt=""/>*/}
+                            {/*</a>*/}
+                            {/*<a href=" http://www.morganstanley.com/"*/}
+                               {/*target="view_window">*/}
+                                {/*<img className='logoBoxT' src={require('./images/8.png')} alt=""/>*/}
+                            {/*</a>*/}
 
+                        {/*</div>*/}
+                        <div  className='logoBox'>
+                            <ul className={'exchangeList'}>
+
+                                <li>
+                                    <div>< img src={require('./images/fudan.png')} /></div>
+                                </li>
+                                <li>
+                                    <div>< img src={require('./images/fudan.png')} /></div>
+                                </li>
+
+                                <li>
+                                    <div>< img src={require('./images/fudan.png')} /></div>
+                                </li>
+                                <li>
+                                    <div>< img src={require('./images/fudan.png')} /></div>
+                                </li>
+                                <li>
+                                    <div>< img src={require('./images/fudan.png')} /></div>
+                                </li>
+                                <li>
+                                    <div>< img src={require('./images/fudan.png')} /></div>
+                                </li>
+                                <li>
+                                    <div>< img src={require('./images/fudan.png')} /></div>
+                                </li>
+                                <li>
+                                    <div>< img src={require('./images/fudan.png')} /></div>
+                                </li>
+                                <li>
+                                    <div>< img src={require('./images/fudan.png')} /></div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </a>
