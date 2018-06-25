@@ -234,6 +234,26 @@ class App extends Component {
                         <div className="thirdContentCC">
                             {lang.thirdPartCC}
                         </div>
+                        <div>
+                            <ul className={'exchangeList'}>
+                                <li>
+                                    <div>< img onMouseEnter ={(e)=>{console.log(44,e);e.target.src=require('./images/www2.png')}} onMouseOut={(e)=>{console.log(44,e);e.target.src=require('./images/www.png')}} src={require('./images/www.png')} /></div>
+                                </li>
+                                <li>
+                                    <div>< img src={require('./images/www.png')} /></div>
+                                </li>
+                                <li>
+                                    <div>< img src={require('./images/www.png')} /></div>
+                                </li>
+
+                                <li>
+                                    <div>< img src={require('./images/www.png')} /></div>
+                                </li>
+                                <li>
+                                    <div>< img src={require('./images/www.png')} /></div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </a>
 
