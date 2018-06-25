@@ -3,21 +3,25 @@
     margin: 0
 }
 
+.allWrap{
+    position: relative;
+}
 .allWrap .point1 {
-    top: 708px;
-    left: -100px;
+    top: 723px;
+    left: 68px;
+
 
 }
 
 .allWrap .point2 {
-    top: 600px;
-    left: 460px;
+    top: 626px;
+    left: 400px;
 
 }
 
 .allWrap .point3 {
-    top: 673px;
-    left: 890px;
+    top: 714px;
+    left: 888px;
 
 }
 
@@ -46,9 +50,8 @@
 }
 
 .flexWrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: block;
+
 }
 
 .allWrap a{
@@ -56,7 +59,7 @@
     color: #ffffff;
 }
 
-.allWrap .itemWrap {
+.allWrap>a{
     position: absolute;
 }
 
@@ -65,6 +68,7 @@
     width: 36px;
     height: 74px;
     overflow: hidden;
+    margin: 0 auto;
 
 }
 
@@ -120,13 +124,20 @@
     position: absolute;
     top: 27px;
     width: 350px;
-    opacity: 0.6;
+    opacity: 0.8;
+
+}
+.p1{
     font-size: 24px;
+}
+.p2{
+    font-size: 20px;
 }
 
 .allWrap .pLast {
     opacity: 0;
     font-size: 16px;
+    text-align: center;
 }
 
 .allWrap .itemWrap:hover img {
@@ -136,15 +147,19 @@
 
 .allWrap .itemWrap:hover .imgWrap {
     opacity: 1;
-    width: 50px;
-
+    width:44px;
+    transition: width 0.3s, 0.3s ease-out;
 }
 
 .allWrap .itemWrap:hover .p {
     opacity: 1;
     font-weight: bold;
+    transition: opacity 0.5s;
+
 }
 
 .allWrap .itemWrap:hover .pLast {
     opacity: 1;
+    transition: opacity 0.5s
 }
+
