@@ -1,7 +1,7 @@
 html,
 body {
     margin: 0;
-    font-family: Avenir Next LT Pro;
+    font-family: Calibri;
 }
 
 html {
@@ -38,8 +38,7 @@ a {
     transition: all 0.2s;
 }
 
-a.active,
-a:hover {
+a.active{
     color: #5262ff;
 }
 button {
@@ -55,12 +54,18 @@ button {
 }
 
 .first {
-    background-image: url("./images/banner.png");
+
     height: 1000px;
     background-position: center;
     display: block;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.bg {
+    background-image: url("./images/banner.png");
+}
+.bgC {
+    background-image: url("./images/bannerC.png");
 }
 
 .second {
@@ -76,7 +81,7 @@ button {
 }
 
 .secongHeaderT {
-    font-size: 72px;
+    font-size: 60px;
     color: #3B3D40;
     display: block;
     line-height: 92px;
@@ -84,9 +89,8 @@ button {
 }
 
 .secongHeaderB {
-    font-size: 72px;
+    font-size: 60px;
     color: #5262ff;
-    display: block;
     line-height: 92px;
     font-weight: bold;
 }
@@ -111,12 +115,26 @@ button {
 }
 
 .secongContentBC {
-    font-size: 18px;
-    line-height: 30px;
+    line-height: 36px;
     color: #989898;
     display: block;
     width: 1200px;
 }
+.secongContentBC1 {
+    font-size: 24px;
+    line-height: 36px;
+    color: #989898;
+    display: block;
+    width: 1200px;
+}
+.secongContentBC2 {
+    font-size: 20px;
+    line-height: 36px;
+    color: #989898;
+    display: block;
+    width: 1200px;
+}
+
 
 .third {
     background-image: url("./images/sectionBg.png");
@@ -128,16 +146,16 @@ button {
 .thirdContent {
     width: 1200px;
     margin: 0 auto;
-    padding-top: 300px;
+    padding-top: 130px;
 }
 
 .thirdContentT {
     display: block;
     color: #fff;
     text-align: center;
-    font-size: 90px;
+    font-size: 60px;
     font-weight: bold;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .thirdContentC {
@@ -147,6 +165,48 @@ button {
     font-size: 24px;
     line-height: 30px;
     font-weight: bold;
+}
+.thirdContentCBox {
+    width: 100%;
+    margin-top: 25px;
+}
+.thirdContentCBox:after{
+    display: block;
+    clear: both;
+    content: '';
+}
+.thirdContentCBoxC {
+    display: block;
+    float: left;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    font-weight: lighter;
+    margin-right: 106px;
+}
+.thirdContentCBoxC1 {
+    width: 25%;
+    text-align: center;
+    font-size: 20px;
+    margin-right: 0;
+}
+.thirdContentCBoxC:last-child{
+    margin-right: 0;
+}
+.Hline{
+    width: 560px;
+    height: 2px;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-top: 90px;
+}
+.thirdContentCC{
+    width: 100%;
+    font-size: 24px;
+    line-height: 32px;
+    color: #fff;
+    text-align: center;
+    margin-top: 50px;
 }
 
 .fourth {
@@ -195,6 +255,8 @@ button {
     margin-right: 80px;
     float: left;
 }
+
+
 .fourthContentLiC {
     float: left;
     padding-top: 4px;
@@ -210,7 +272,7 @@ button {
 }
 .fourthContentLiCHS {
     color: #989898;
-    font-size: 16px;
+    font-size: 18px;
     float: left;
     font-weight: bold;
 }
@@ -231,10 +293,10 @@ button {
 .fourthContentLiCC {
     display: block;
     width: 950px;
-    margin-top: 20px;
+    margin-top: 14px;
     color: #989898;
     font-size: 16px;
-    line-height: 30px;
+    line-height: 20px;
 }
 
 @font-face {
@@ -274,8 +336,13 @@ button {
     background-color: #0e80d2;
 
 }
+.logoBoxT:hover{
+    outline: 1px solid #5262ff;
+
+}
 .fourthContentLiCHSL{
     font-weight: lighter;
+    text-align: center;
 }
 
 
@@ -292,7 +359,7 @@ button {
 }
 .fifthHeaderT{
     display: block;
-    font-size: 72px;
+    font-size: 60px;
     color: #3B3D40;
     font-weight: bold;
     text-align: center;
@@ -406,7 +473,7 @@ button {
         background-size: cover;
     }
     .second {
-        padding-top: 30px;
+        padding-top: 20px;
         height: auto;
         padding-bottom: 50px;
     }
@@ -464,6 +531,30 @@ button {
         line-height: 24px;
 
     }
+    .thirdContentCBoxC {
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        font-size: 16px;
+        font-weight: lighter;
+        margin-bottom: 0px;
+    }
+    .Hline{
+        width: 80%;
+        height: 2px;
+        background-color: #fff;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+    .thirdContentCC{
+
+        font-size: 14px;
+        line-height: 20px;
+        color: #fff;
+        text-align: center;
+        margin-top: 30px;
+    }
     .fourth {
         height: auto;
         padding-bottom: 40px;
@@ -484,6 +575,9 @@ button {
         line-height: 24px;
         margin-bottom: 10px;
     }
+    .fourthContentLiC{
+        padding-top: 10px;
+    }
     .fourthContentLiCC{
         width: 100%;
         margin-top: 10px;
@@ -493,17 +587,35 @@ button {
     .fourthContentLi{
         margin-top: 40px;
     }
+    .fourthContentLiI {
+        float: none;
+        margin: 0 auto;
+    }
+    .fourthContentLiCH{
+        position: relative;
+    }
     .fourthContentLiCHI{
         margin-left: 10px;
     }
+    .fourthContentLiCHS{
+        margin: 0 auto;
+        display: block;
+        float: none;
+        text-align: center;
+    }
     .fourthContentLiCHSL{
         display: block;
+    }
+    .fourthContentLiCHA{
+        position: absolute;
+        top: 0;
+        right: 0;
     }
     .logoBox{
         width:100%;
 
     }
-    .logoBox>div{
+    .logoBox>a{
         width: 50%;
         float: left;
     }

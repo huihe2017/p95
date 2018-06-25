@@ -6,8 +6,9 @@
     display: block;
     transition: all 0.5s, 0.5s ease-out;
     background-color: #000;
-    padding-top: 200px;
+    padding-top: 40px;
     z-index: 5;
+    opacity: 1;
 }
 
 .sideBar a{
@@ -17,13 +18,23 @@
 
 .sideBar.hide {
     left: -420px;
+    opacity: 0;
 }
 .mask.hide1 {
     background-color: rgba(0,0,0,0);
     z-index: -1;
+    display: none;
 }
+.logo {
 
-.sideBar div {
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 150px;
+}
+.logo img{
+    height: 30px;
+}
+.sideBarA{
     line-height: 60px;
     font-size: 18px;
     text-align: left;
@@ -50,7 +61,7 @@
     position: fixed;
     left: 0;
     top: 0;
-    background-color: rgba(0,0,0,.7);
+    background-color: rgba(0,0,0,.0);
     z-index: 2;
     transition: all 0.3s;
 }
@@ -61,5 +72,15 @@
         display: flex;
         flex-direction:column ;
         justify-content: center;
+        position: absolute;
+    }
+    .logo {
+        margin-left:16px;
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+    .logo img{
+        height: 20px;
     }
 }

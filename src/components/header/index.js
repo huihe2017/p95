@@ -12,8 +12,6 @@ class Header extends React.Component {
         }
         this.choceType = this.choceType.bind(this)
 		this.LangChange = this.LangChange.bind(this)
-
-
     }
 
 
@@ -33,8 +31,11 @@ class Header extends React.Component {
         // return true
     }
 
+
     choceType() {
-        if (window.location.hash.substr(1).indexOf('/?') !== -1) {
+        console.log(window.location.hash);
+
+            console.log(222);
             this.setState({position: 'absolute'})
             this.setState({otherStyle: false})
             let dance = document.body.clientWidth * 0.46
@@ -43,7 +44,7 @@ class Header extends React.Component {
             window.onscroll = (e) => {
                 //console.log(document.body.scrollTop)
                 var oTop = document.body.scrollTop == 0 ? document.documentElement.scrollTop : document.body.scrollTop;
-
+                console.log(oTop);
                 if (oTop < danceCopy) {
                     this.setState({position: 'absolute'})
                     this.setState({otherStyle: false})
@@ -59,10 +60,11 @@ class Header extends React.Component {
                 }
                 dance = oTop
             }
-        }
+
     }
 
     componentWillMount() {
+        this.choceType()
         if(!this.state.isHide){
             window.addEventListener('scroll',()=>{this.show()})
         }
@@ -83,19 +85,16 @@ class Header extends React.Component {
     render() {
 
         return (
-            <div className='wrap'>
-                <div className='logo'>
-                    <img src={require("./logo.png")}/>
-                </div>
+            <div className={`wrap ${this.state.otherStyle ?'otherStyle':''}`} style={this.state.otherStyle ?{position: 'fixed'}:{position: 'absolute'}}>
 
+                <div className="cn">
+                    <span onClick={()=>{this.LangChange('ch')}} className={`cnSpan ${this.props.language=='en'?'':'ative'}`}>中文 </span> / <span onClick={()=>{this.LangChange('en')}} className={`cnSpan ${this.props.language=='en'?'ative':''}`}>  EN</span>
+                </div>
                 <div onClick={this.onOpenChange} className='sider'>
 
                 </div>
-                <div className="cn">
-                    <span onClick={()=>{this.LangChange('ch')}} className={`cnSpan ${this.props.language=='en'?'':'ative'}`}>中 </span>/
-                    <span onClick={()=>{this.LangChange('en')}} className={`cnSpan ${this.props.language=='en'?'ative':''}`}> EN</span>
-                </div>
-                <SideBar language={this.props.language} lang={this.props.lang} click={()=>this.show()} show={this.state.isHide}/>
+
+                <SideBar otherStyle={this.state.otherStyle} language={this.props.language} lang={this.props.lang} click={()=>this.show()} show={this.state.isHide}/>
             </div>
         )
     }
