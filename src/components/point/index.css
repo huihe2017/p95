@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0
+}
+
+.allWrap .point1 {
+    top: 708px;
+    left: -100px;
+
+}
+
+.allWrap .point2 {
+    top: 600px;
+    left: 460px;
+
+}
+
+.allWrap .point3 {
+    top: 673px;
+    left: 890px;
+
+}
+
+@keyframes imgMove {
+    from {
+        top: 150px;
+
+    }
+    to {
+        top: 0px;
+
+    }
+}
+
+@keyframes pMove {
+    0% {
+        top: 27px;
+        display: none;
+
+    }
+    100% {
+        top: 0px;
+        display: block;
+
+    }
+}
+
+.flexWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.allWrap a{
+    position: relative;
+    color: #ffffff;
+}
+
+.allWrap .itemWrap {
+    position: absolute;
+}
+
+.flexWrap .imgWrap {
+    position: relative;
+    width: 36px;
+    height: 74px;
+    overflow: hidden;
+
+}
+
+.flexWrap .imgWrap img {
+    position: absolute;
+    top: 75px;
+    opacity: 0.6;
+}
+
+.allWrap .point1 img {
+    animation: imgMove 0.4s ease;
+    animation-fill-mode: forwards;
+    width: 100%;
+}
+
+.allWrap .point1 p {
+    animation: pMove 0.4s ease 0.4s;
+    animation-fill-mode: forwards;
+}
+
+.allWrap .point2 img {
+    animation: imgMove 0.4s ease 0.8s;
+    animation-fill-mode: forwards;
+    width: 100%;
+}
+
+.allWrap .point2 p {
+    animation: pMove 0.4s ease 1.2s;
+    animation-fill-mode: forwards;
+}
+
+.allWrap .point3 img {
+    animation: imgMove 0.4s ease 1.6s;
+    animation-fill-mode: forwards;
+    width: 100%;
+}
+
+.allWrap .point3 p {
+    animation: pMove 0.4s ease 2.0s;
+    animation-fill-mode: forwards;
+}
+
+.allWrap .pWrap {
+    position: relative;
+    height: 27px;
+    width: 350px;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+.allWrap .pWrap .p {
+    position: absolute;
+    top: 27px;
+    width: 350px;
+    opacity: 0.6;
+    font-size: 24px;
+}
+
+.allWrap .pLast {
+    opacity: 0;
+    font-size: 16px;
+}
+
+.allWrap .itemWrap:hover img {
+    opacity: 1;
+
+}
+
+.allWrap .itemWrap:hover .imgWrap {
+    opacity: 1;
+    width: 50px;
+
+}
+
+.allWrap .itemWrap:hover .p {
+    opacity: 1;
+    font-weight: bold;
+}
+
+.allWrap .itemWrap:hover .pLast {
+    opacity: 1;
+}
