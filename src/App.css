@@ -108,6 +108,12 @@ button {
     height: 48px;
     display: block;
     margin-bottom: 20px;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+.secongContentBI:hover{
+
+    filter: grayscale(0%);
 }
 
 .secongContentBT {
@@ -201,14 +207,18 @@ button {
     float: left;
     list-style-type: none;
     opacity: 0;
+    width:240px;
+    height: 244px;
 }
-.thirdContent .exchangeList li div img{
+.thirdContent .exchangeList li a img{
     margin: 20px;
+
 }
 
-.thirdContent .exchangeList li div img:hover  {
-    margin: 0px;
+.thirdContent .exchangeList li a img:hover  {
+    margin: 0;
     width:240px;
+
 }
 .thirdContent .exchangeList li:nth-child(1){
     animation: toOne 0.3s ease 0s;
@@ -347,19 +357,24 @@ button {
     float: left;
     list-style-type: none;
     opacity: 0;
+    width: 200px;
+    height: 156px;
 }
-.fourthContent .exchangeList li div img{
-    margin: 40px;
+.fourthContent .exchangeList li a{
+
 }
 
-/*.fourthContent .exchangeList li div img:hover  {*/
-    /*margin: 0px;*/
-    /*width:200px;*/
-/*}*/
-.fourthContent .exchangeList li:nth-child(6) div img  {
-margin: 0px;
-width:200px;
+.fourthContent .exchangeList li a img{
+    margin: 40px;
+    filter: grayscale(100%);
 }
+
+.fourthContent .exchangeList li a img:hover  {
+    margin: 35px;
+    width:130px;
+    filter: grayscale(0%);
+}
+
 .fourthContent .exchangeList li:nth-child(1){
     animation: toOne 0.3s ease 0s;
     animation-fill-mode: forwards;
@@ -381,29 +396,26 @@ width:200px;
     animation-fill-mode: forwards;
 }
 .fourthContent .exchangeList li:nth-child(6){
-    animation: toOne 0.3s ease 1.5s;
+    animation: toOne 0.3s ease 1.8s;
     animation-fill-mode: forwards;
 }
 .fourthContent .exchangeList li:nth-child(7){
-    animation: toOne 0.3s ease 1.5s;
+    animation: toOne 0.3s ease 2.1s;
     animation-fill-mode: forwards;
 }
 .fourthContent .exchangeList li:nth-child(8){
-    animation: toOne 0.3s ease 1.5s;
+    animation: toOne 0.3s ease 2.4s;
     animation-fill-mode: forwards;
 }
 .fourthContent .exchangeList li:nth-child(9){
-    animation: toOne 0.3s ease 1.5s;
+    animation: toOne 0.3s ease 2.7s;
     animation-fill-mode: forwards;
 }
 .fourthContent .exchangeList li:nth-child(10){
-    animation: toOne 0.3s ease 1.5s;
+    animation: toOne 0.3s ease 3.0s;
     animation-fill-mode: forwards;
 }
-.fourthContent .exchangeList li:nth-child(){
-    animation: toOne 0.3s ease 1.5s;
-    animation-fill-mode: forwards;
-}
+
 @font-face {
     font-family: 'iconfont';  /* project id 717126 */
     src: url('https://at.alicdn.com/t/font_717126_9gwfkeke57a.eot');
@@ -624,21 +636,28 @@ width:200px;
         height: auto;
         padding-bottom: 50px;
     }
+    .
+    .third:after{
+        display: block;
+        clear: both;
+        content: '';
+    }
     .thirdContent {
         width: 100%;
         padding: 0 16px;
         padding-top: 30px;
     }
     .thirdContentT {
-        font-size: 30px;
+        font-size: 24px;
         margin-bottom: 20px;
     }
 
     .thirdContentC {
-        font-size: 14px;
+        font-size: 15px;
         line-height: 24px;
 
     }
+
     .thirdContentCBoxC {
         display: block;
         width: 100%;
@@ -647,6 +666,9 @@ width:200px;
         font-size: 16px;
         font-weight: lighter;
         margin-bottom: 0px;
+    }
+    .thirdContentCBoxC1{
+        font-size: 14px;
     }
     .Hline{
         width: 80%;
@@ -657,12 +679,40 @@ width:200px;
     }
     .thirdContentCC{
 
-        font-size: 14px;
+        font-size: 15px;
         line-height: 20px;
         color: #fff;
         text-align: center;
         margin-top: 30px;
     }
+    .third .exchangeList:after{
+        display: block;
+        content: '';
+        clear: both;
+
+    }
+    .third .exchangeList li{
+
+        width: 50%;
+        height: 120px;
+    }
+    .thirdContent .exchangeList li a{
+        display: block;
+        margin: 0 auto;
+    }
+    .thirdContent .exchangeList li a img{
+        margin: 0 auto;
+        display: block;
+        width: 100px;
+        height: 100px;
+    }
+    .thirdContent .exchangeList li a img:hover  {
+        margin: 0 auto;
+        width: 100px;
+        height: 100px;
+
+    }
+
     .fourth {
         height: auto;
         padding-bottom: 40px;
@@ -689,8 +739,8 @@ width:200px;
     .fourthContentLiCC{
         width: 100%;
         margin-top: 10px;
-        font-size: 16px;
-        line-height: 24px;
+        font-size: 14px;
+        line-height: 22px;
     }
     .fourthContentLi{
         margin-top: 40px;
@@ -699,10 +749,36 @@ width:200px;
         float: none;
         margin: 0 auto;
     }
+    .fourthContentLiCHS{
+        font-size: 16px;
+
+    }
+    .fourthContentLiCHSL{
+        font-size: 16px;
+
+    }
     .fourthContentLiCHI{
 
         display: inline-block;
         margin-right: 8px;
+    }
+    .fourthContent .exchangeList li{
+
+        width: 50%;
+        height: 100px;
+    }
+    .fourthContent .exchangeList li a{
+        display: block;
+    }
+    .fourthContent .exchangeList li a img{
+        display: block;
+        margin: 0 auto;
+        filter: grayscale(100%);
+    }
+    .fourthContent .exchangeList li a img:hover  {
+        margin: 0 auto;
+        width:120px;
+        filter: grayscale(0%);
     }
     .iconfont{
         margin-top: 2px;
@@ -726,7 +802,7 @@ width:200px;
     }
     .logoBox{
         width:100%;
-
+        margin-top: 20px;
     }
     .logoBox>a{
         width: 50%;
@@ -744,12 +820,13 @@ width:200px;
         padding-top: 30px;
     }
     .fifthHeaderT{
-        font-size: 30px;
+        font-size: 24px;
         margin-bottom: 20px;
     }
     .fifthHeaderC{
         font-size: 14px;
         line-height: 20px;
+        padding: 0 16px;
     }
     .fifthContentCLT{
         font-size: 14px

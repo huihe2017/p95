@@ -167,9 +167,9 @@ class App extends Component {
         return (
             <div id="main">
                 <Hheader language={this.state.lang} lang={lang} LangChange={this.LangChange.bind(this)}/>
-                <a className={`first ${this.state.lang == 'en' ?'bg':'bgC'}`} name="sectionOne">
-                    <div className='pointBox' >
-                        <div style={{position:'relative'}} >
+                <a className={`first ${this.state.lang == 'en' ? 'bg' : 'bgC'}`} name="sectionOne">
+                    <div className='pointBox'>
+                        <div style={{position: 'relative'}}>
                             <Point language={this.state.lang} lang={lang}></Point>
                         </div>
                     </div>
@@ -188,7 +188,8 @@ class App extends Component {
                             <span className='secongContentBT'>
                                           {lang.secondFPartT}
                                     </span>
-                            <span className={`secongContentBC ${this.state.lang == 'en' ?'secongContentBC1':'secongContentBC2'}`}>
+                            <span
+                                className={`secongContentBC ${this.state.lang == 'en' ? 'secongContentBC1' : 'secongContentBC2'}`}>
                                            {lang.secondFPartCF}
                                 <br/>
                                 {lang.secondFPartCL}
@@ -199,7 +200,8 @@ class App extends Component {
                             <span className='secongContentBT'>
                                 {lang.secondSPartT}
                                 </span>
-                            <span className={`secongContentBC ${this.state.lang == 'en' ?'secongContentBC1':'secongContentBC2'}`}>
+                            <span
+                                className={`secongContentBC ${this.state.lang == 'en' ? 'secongContentBC1' : 'secongContentBC2'}`}>
                                 {lang.secondSPartC}
                                 </span>
                         </div>
@@ -215,16 +217,20 @@ class App extends Component {
                             {lang.thirdPartC}
                             </span>
                         <div className="thirdContentCBox">
-                            <span className={`thirdContentCBoxC ${this.state.lang == 'en' ? '' : 'thirdContentCBoxC1'}`}>
+                            <span
+                                className={`thirdContentCBoxC ${this.state.lang == 'en' ? '' : 'thirdContentCBoxC1'}`}>
                                 {lang.thirdPartCP1}
                             </span>
-                            <span className={`thirdContentCBoxC ${this.state.lang == 'en' ? '' : 'thirdContentCBoxC1'}`}>
+                            <span
+                                className={`thirdContentCBoxC ${this.state.lang == 'en' ? '' : 'thirdContentCBoxC1'}`}>
                                 {lang.thirdPartCP2}
                             </span>
-                            <span className={`thirdContentCBoxC ${this.state.lang == 'en' ? '' : 'thirdContentCBoxC1'}`}>
+                            <span
+                                className={`thirdContentCBoxC ${this.state.lang == 'en' ? '' : 'thirdContentCBoxC1'}`}>
                                 {lang.thirdPartCP3}
                             </span>
-                            <span className={`thirdContentCBoxC ${this.state.lang == 'en' ? '' : 'thirdContentCBoxC1'}`}>
+                            <span
+                                className={`thirdContentCBoxC ${this.state.lang == 'en' ? '' : 'thirdContentCBoxC1'}`}>
                                 {lang.thirdPartCP4}
                             </span>
                         </div>
@@ -234,26 +240,61 @@ class App extends Component {
                         <div className="thirdContentCC">
                             {lang.thirdPartCC}
                         </div>
-                        <div>
-                            <ul className={'exchangeList'}>
-                                <li>
-                                    <div>< img onMouseEnter ={(e)=>{console.log(44,e);e.target.src=require('./images/www2.png')}} onMouseOut={(e)=>{console.log(44,e);e.target.src=require('./images/www.png')}} src={require('./images/www.png')} /></div>
-                                </li>
-                                <li>
-                                    <div>< img src={require('./images/www.png')} /></div>
-                                </li>
-                                <li>
-                                    <div>< img src={require('./images/www.png')} /></div>
-                                </li>
 
-                                <li>
-                                    <div>< img src={require('./images/www.png')} /></div>
-                                </li>
-                                <li>
-                                    <div>< img src={require('./images/www.png')} /></div>
-                                </li>
-                            </ul>
-                        </div>
+                        <ul className={'exchangeList'}>
+                            <li>
+                                <a href="https://www.huobi.pro/zh-cn/"
+                                   target="view_window">< img onMouseEnter={(e) => {
+                                    console.log(44, e);
+                                    e.target.src = require('./images/huoa.png')
+                                }} onMouseOut={(e) => {
+                                    console.log(44, e);
+                                    e.target.src = require('./images/huo.png')
+                                }} src={require('./images/huo.png')}/></a>
+                            </li>
+                            <li>
+                                <a href="https://www.bitfinex.com/"
+                                   target="view_window">< img onMouseEnter={(e) => {
+                                    console.log(44, e);
+                                    e.target.src = require('./images/bitxa.png')
+                                }} onMouseOut={(e) => {
+                                    console.log(44, e);
+                                    e.target.src = require('./images/bitx.png')
+                                }} src={require('./images/bitx.png')}/></a>
+                            </li>
+                            <li>
+                                <a href=" https://www.bithumb.com/"
+                                   target="view_window">< img onMouseEnter={(e) => {
+                                    console.log(44, e);
+                                    e.target.src = require('./images/ba.png')
+                                }} onMouseOut={(e) => {
+                                    console.log(44, e);
+                                    e.target.src = require('./images/b.png')
+                                }} src={require('./images/b.png')}/></a>
+                            </li>
+
+                            <li>
+                                <a href="https://www.okex.com/"
+                                   target="view_window">< img onMouseEnter={(e) => {
+                                    console.log(44, e);
+                                    e.target.src = require('./images/oka.png')
+                                }} onMouseOut={(e) => {
+                                    console.log(44, e);
+                                    e.target.src = require('./images/ok.png')
+                                }} src={require('./images/ok.png')}/></a>
+                            </li>
+                            <li>
+                                <a href="https://www.coinsuper.com/"
+                                   target="view_window">< img onMouseEnter={(e) => {
+                                    console.log(44, e);
+                                    e.target.src = require('./images/coina.png')
+                                }} onMouseOut={(e) => {
+                                    console.log(44, e);
+                                    e.target.src = require('./images/coin.png')
+                                }} src={require('./images/coin.png')}/></a>
+                            </li>
+                        </ul>
+
                     </div>
                 </a>
 
@@ -317,76 +358,49 @@ class App extends Component {
                                         </span>
                             </div>
                         </div>
-                        {/*<div className='logoBox'>*/}
-
-                            {/*<a href="http://www.ox.ac.uk/"*/}
-                               {/*target="view_window">*/}
-                                {/*<img className='logoBoxT' src={require('./images/4.png')} alt=""/>*/}
-                            {/*</a>*/}
-                            {/*<a href="https://www.hku.hk/"*/}
-                               {/*target="view_window">*/}
-                                {/*<img className='logoBoxT' src={require('./images/7.png')} alt=""/>*/}
-                            {/*</a>*/}
-                            {/*<a href="http://www.zju.edu.cn/"*/}
-                               {/*target="view_window">*/}
-                                {/*<img className='logoBoxT' src={require('./images/3.png')} alt=""/>*/}
-                            {/*</a>*/}
-                            {/*<a href="http://www.fudan.edu.cn/2016/index.html"*/}
-                               {/*target="view_window">*/}
-                                {/*<img className='logoBoxT' src={require('./images/5.png')} alt=""/>*/}
-                            {/*</a>*/}
-                            {/*<a href="http://www.tsinghua.edu.cn/publish/thu2018/index.html"*/}
-                               {/*target="view_window">*/}
-                                {/*<img className='logoBoxT' src={require('./images/6.png')} alt=""/>*/}
-                            {/*</a>*/}
-                            {/*<a href="http://www.jpmorganchina.com.cn/country/CN/zh/jpmorgan"*/}
-                               {/*target="view_window">*/}
-                                {/*<img className='logoBoxT' src={require('./images/9.png')} alt=""/>*/}
-                            {/*</a>*/}
-                            {/*<a href="http://www.cs.ecitic.com/newsite/"*/}
-                               {/*target="view_window">*/}
-                                {/*<img className='logoBoxT' src={require('./images/2.png')} alt=""/>*/}
-                            {/*</a>*/}
-                            {/*<a href="https://www.ml.com/"*/}
-                               {/*target="view_window">*/}
-                                {/*<img className='logoBoxT' src={require('./images/1.png')} alt=""/>*/}
-                            {/*</a>*/}
-                            {/*<a href=" http://www.morganstanley.com/"*/}
-                               {/*target="view_window">*/}
-                                {/*<img className='logoBoxT' src={require('./images/8.png')} alt=""/>*/}
-                            {/*</a>*/}
-
-                        {/*</div>*/}
-                        <div  className='logoBox'>
+                        <div className='logoBox'>
                             <ul className={'exchangeList'}>
 
                                 <li>
-                                    <div>< img src={require('./images/fudan.png')} /></div>
+                                    <a href="http://www.zju.edu.cn/"
+                                       target="view_window">< img src={require('./images/1.png')}/></a>
                                 </li>
                                 <li>
-                                    <div>< img src={require('./images/fudan.png')} /></div>
+                                    <a href="http://www.fudan.edu.cn/2016/index.html"
+                                       target="view_window">< img src={require('./images/2.png')}/></a>
                                 </li>
 
                                 <li>
-                                    <div>< img src={require('./images/fudan.png')} /></div>
+                                    <a href="http://www.ox.ac.uk/"
+                                       target="view_window">< img src={require('./images/3.png')}/></a>
                                 </li>
                                 <li>
-                                    <div>< img src={require('./images/fudan.png')} /></div>
+                                    <a href="https://www.hku.hk/"
+                                       target="view_window">< img src={require('./images/4.png')}/></a>
                                 </li>
                                 <li>
-                                    <div>< img src={require('./images/fudan.png')} /></div>
+                                    <a href="http://www.tsinghua.edu.cn/publish/thu2018/index.html"
+                                       target="view_window">< img src={require('./images/5.png')}/></a>
                                 </li>
                                 <li>
-                                    <div>< img src={require('./images/fudan.png')} /></div>
+                                    <a href="http://www.jpmorganchina.com.cn/country/CN/zh/jpmorgan"
+                                       target="view_window">< img src={require('./images/6.png')}/></a>
                                 </li>
                                 <li>
-                                    <div>< img src={require('./images/fudan.png')} /></div>
+                                    <a href="http://www.cs.ecitic.com/newsite/"
+                                       target="view_window">< img src={require('./images/7.png')}/></a>
                                 </li>
                                 <li>
-                                    <div>< img src={require('./images/fudan.png')} /></div>
+                                    <a href="https://www.ml.com/"
+                                       target="view_window">< img src={require('./images/8.png')}/></a>
                                 </li>
                                 <li>
-                                    <div>< img src={require('./images/fudan.png')} /></div>
+                                    <a href="https://warwick.ac.uk/"
+                                       target="view_window">< img src={require('./images/9.png')}/></a>
+                                </li>
+                                <li>
+                                    <a href="http://www.morganstanley.com/"
+                                       target="view_window">< img src={require('./images/10.png')}/></a>
                                 </li>
                             </ul>
                         </div>
@@ -395,11 +409,12 @@ class App extends Component {
                 <a className='fifth' name="sectionFive">
                     <div className="fifthContent">
                         <span className="fifthHeaderT">
-                            {lang.fifthPartTT}{this.state.lang == 'en' ? ' ' : ''}<span style={{color: '#5262ff'}}>{lang.fifthPartTC}</span>
+                            {lang.fifthPartTT}{this.state.lang == 'en' ? ' ' : ''}<span
+                            style={{color: '#5262ff'}}>{lang.fifthPartTC}</span>
                         </span>
                         <span className="fifthHeaderC">
                             {lang.fifthPartAddress}<br/>
-                            {lang.fifthPartAddressB}<span style={{color:'#5262ff'}}>info@p95g.com</span>
+                            {lang.fifthPartAddressB}<span style={{color: '#5262ff'}}>info@p95g.com</span>
                         </span>
                         <div className="fifthContentC">
                             <div className="fifthContentCL">

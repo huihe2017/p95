@@ -17,7 +17,7 @@ class Point extends Component {
                     </div>
                     </a>
 
-                    <a className='point2' href={'/#sectionTwo'}>
+                    <a className='point2' href={'/#sectionThree'}>
                         <div className='itemWrap '>
 
                             <div className="flexWrap">
@@ -27,7 +27,7 @@ class Point extends Component {
                             </div>
                         </div>
                     </a>
-                    <a className='point3' href={'/#sectionTwo'}>
+                    <a className='point3' href={'/#sectionFive'}>
                         <div className='itemWrap '>
 
                             <div className="flexWrap">
