@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
-import {SectionsContainer, Section, Header, Footer} from 'react-fullpage';
 import Hheader from './components/header';
 import Point from './components/point';
 
@@ -22,11 +20,11 @@ const en =
         thirdPartTL: 'Market',
         thirdPartTR: 'Making',
         thirdPartTP: 'Best Service Provider in Marketing Making',
-        thirdPartC: 'Point95 Global is dedicated to provide market making services including:',
-        thirdPartCP1: 'provision of liquidity',
-        thirdPartCP2: 'price stabilization',
-        thirdPartCP3: 'prevention of market manipulation',
-        thirdPartCP4: 'arbitrage trading',
+        thirdPartC: 'Point95 Global is dedicated to providing market making services including:',
+        thirdPartCP1: 'Provision of Liquidity',
+        thirdPartCP2: 'Prevention of Market',
+        thirdPartCP3: 'Prevention of Market Manipulation',
+        thirdPartCP4: 'Arbitrage Trading',
         thirdPartCC: 'Our proprietary market making model has achieved outstanding performance in traditional complex financial markets for many years, and the results of market making in digital assets are also proven exceptional. Our typical clients of market making services are exchanges and ICO projects.',
         fourthPartTTF: 'Management',
         fourthPartTTL: 'Team',
@@ -49,6 +47,8 @@ const en =
         fifthPartST: 'YOUR EMAIL',
         fifthPartTT1: 'YOUR NAME',
         fifthPartSend: 'SEND',
+        fifthPartSendS: 'SENT SUCCESSFULLY',
+        fifthPartSendF: 'UNABLE TO SEND ',
     }
 
 const ch =
@@ -95,6 +95,8 @@ const ch =
         fifthPartST: '你的邮箱',
         fifthPartTT1: '你的姓名',
         fifthPartSend: '发送',
+        fifthPartSendS: '发送成功',
+        fifthPartSendF: '发送失败',
     }
 
 
@@ -104,28 +106,63 @@ class App extends Component {
         this.state = {
             disable: false,
             lang: 'en',
-            name: ''
+            name: '',
+            word:'fifthPartSend',
+            send:false,
+            success:false,
+            color:'nor'
+        }
+
+    }
+
+    scroll(e) {
+
+        if(e>1800){
+            // alert(1)
+            this.setState({
+                action:true
+            })
+        }
+        if(e>2940){
+            // alert(1)
+            this.setState({
+                action1:true
+            })
         }
     }
 
-    componentWillMount() {
-
-    }
-
     submit() {
-
+        let that=this
         var data = 'mail=' + this.state.email + '&userName=' + this.state.name + '&message=' + this.state.message
-
-        fetch("http://www.p95g.com/api/user/sendmsg", {
+        fetch("https://www.p95g.com/api/user/sendmsg", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
             body: data
-        }).then(res => res.json()).then(res => {
+        }).then(res => res.json())
+            .then(res => {
+            this.setState({send:true},()=>{
+                // console.log(111,this.state.send);
+            })
             if (res.code === 0) {
-                alert('发送成功')
+                that.setState({success:true},()=>{
+                    if(this.state.success){
+                        // console.log(222);
+                        this.setState({
+                            color:'nor1',
+                            word: 'fifthPartSendS',
+                            disable:false
+                        })
+                    }
+                })
             }
+        }).catch((e)=> {
+            this.setState({
+                color:'nor2',
+                word: 'fifthPartSendF',
+                disable:false
+            })
         });
 
         // var xhr = new XMLHttpRequest();
@@ -140,6 +177,10 @@ class App extends Component {
     }
 
     check() {
+        this.setState({
+            word: 'fifthPartSend',
+            color:'nor',
+        })
         if ((this.state.message) && (/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/.test(this.state.email)) && (/^[A-Za-z\u4e00-\u9fa5]+$/.test(this.state.name))) {
             this.setState({
                 disable: true
@@ -164,10 +205,11 @@ class App extends Component {
         } else {
             lang = ch
         }
+
         return (
             <div id="main">
-                <Hheader language={this.state.lang} lang={lang} LangChange={this.LangChange.bind(this)}/>
-                <a className={`first ${this.state.lang == 'en' ? 'bg' : 'bgC'}`} name="sectionOne">
+                <Hheader scroll={this.scroll.bind(this)} language={this.state.lang} lang={lang} LangChange={this.LangChange.bind(this)}/>
+                <a className={`first ${this.state.lang === 'en' ? 'bg' : 'bgC'}`} name="sectionOne">
                     <div className='pointBox'>
                         <div style={{position: 'relative'}}>
                             <Point language={this.state.lang} lang={lang}></Point>
@@ -177,7 +219,7 @@ class App extends Component {
                 <a className='second' name="sectionTwo">
                     <div className="secongContent">
                         <span className='secongHeaderT'>
-						{lang.firstTitleL}{this.state.lang == 'en' ? ' ' : ''}
+						{lang.firstTitleL}{this.state.lang === 'en' ? ' ' : ''}
 
                             <span className='secongHeaderB'>
                                 {lang.firstTitleR}
@@ -189,7 +231,7 @@ class App extends Component {
                                           {lang.secondFPartT}
                                     </span>
                             <span
-                                className={`secongContentBC ${this.state.lang == 'en' ? 'secongContentBC1' : 'secongContentBC2'}`}>
+                                className={`secongContentBC ${this.state.lang === 'en' ? 'secongContentBC1' : 'secongContentBC2'}`}>
                                            {lang.secondFPartCF}
                                 <br/>
                                 {lang.secondFPartCL}
@@ -201,7 +243,7 @@ class App extends Component {
                                 {lang.secondSPartT}
                                 </span>
                             <span
-                                className={`secongContentBC ${this.state.lang == 'en' ? 'secongContentBC1' : 'secongContentBC2'}`}>
+                                className={`secongContentBC ${this.state.lang === 'en' ? 'secongContentBC1' : 'secongContentBC2'}`}>
                                 {lang.secondSPartC}
                                 </span>
                         </div>
@@ -218,57 +260,56 @@ class App extends Component {
                             </span>
                         <div className="thirdContentCBox">
                             <span
-                                className={`thirdContentCBoxC ${this.state.lang == 'en' ? '' : 'thirdContentCBoxC1'}`}>
+                                className={`thirdContentCBoxC ${this.state.lang === 'en' ? '' : 'thirdContentCBoxC1'}`}>
                                 {lang.thirdPartCP1}
                             </span>
                             <span
-                                className={`thirdContentCBoxC ${this.state.lang == 'en' ? '' : 'thirdContentCBoxC1'}`}>
+                                className={`thirdContentCBoxC ${this.state.lang === 'en' ? '' : 'thirdContentCBoxC1'}`}>
                                 {lang.thirdPartCP2}
                             </span>
                             <span
-                                className={`thirdContentCBoxC ${this.state.lang == 'en' ? '' : 'thirdContentCBoxC1'}`}>
+                                className={`thirdContentCBoxC ${this.state.lang === 'en' ? '' : 'thirdContentCBoxC1'}`}>
                                 {lang.thirdPartCP3}
                             </span>
                             <span
-                                className={`thirdContentCBoxC ${this.state.lang == 'en' ? '' : 'thirdContentCBoxC1'}`}>
+                                className={`thirdContentCBoxC ${this.state.lang === 'en' ? '' : 'thirdContentCBoxC1'}`}>
                                 {lang.thirdPartCP4}
                             </span>
                         </div>
                         <div className="Hline">
-
                         </div>
                         <div className="thirdContentCC">
                             {lang.thirdPartCC}
                         </div>
-
-                        <ul className={'exchangeList'}>
+                        <ul className={`exchangeList ${this.state.action?'exchangeList1':''}`}>
                             <li>
                                 <a href="https://www.huobi.pro/zh-cn/"
                                    target="view_window">< img onMouseEnter={(e) => {
-                                    console.log(44, e);
-                                    e.target.src = require('./images/huoa.png')
+
+                                    e.target.src = require('./images/huo.png')
                                 }} onMouseOut={(e) => {
-                                    console.log(44, e);
+                                    // console.log(44, e);
                                     e.target.src = require('./images/huo.png')
                                 }} src={require('./images/huo.png')}/></a>
                             </li>
                             <li>
                                 <a href="https://www.bitfinex.com/"
                                    target="view_window">< img onMouseEnter={(e) => {
-                                    console.log(44, e);
-                                    e.target.src = require('./images/bitxa.png')
+
+                                    e.target.src = require('./images/bitx.png')
                                 }} onMouseOut={(e) => {
-                                    console.log(44, e);
+
                                     e.target.src = require('./images/bitx.png')
                                 }} src={require('./images/bitx.png')}/></a>
                             </li>
+
                             <li>
                                 <a href=" https://www.bithumb.com/"
                                    target="view_window">< img onMouseEnter={(e) => {
-                                    console.log(44, e);
-                                    e.target.src = require('./images/ba.png')
+
+                                    e.target.src = require('./images/b.png')
                                 }} onMouseOut={(e) => {
-                                    console.log(44, e);
+
                                     e.target.src = require('./images/b.png')
                                 }} src={require('./images/b.png')}/></a>
                             </li>
@@ -276,25 +317,32 @@ class App extends Component {
                             <li>
                                 <a href="https://www.okex.com/"
                                    target="view_window">< img onMouseEnter={(e) => {
-                                    console.log(44, e);
-                                    e.target.src = require('./images/oka.png')
+
+                                    e.target.src = require('./images/ok.png')
                                 }} onMouseOut={(e) => {
-                                    console.log(44, e);
+
                                     e.target.src = require('./images/ok.png')
                                 }} src={require('./images/ok.png')}/></a>
                             </li>
                             <li>
                                 <a href="https://www.coinsuper.com/"
                                    target="view_window">< img onMouseEnter={(e) => {
-                                    console.log(44, e);
-                                    e.target.src = require('./images/coina.png')
+
+                                    e.target.src = require('./images/coin.png')
                                 }} onMouseOut={(e) => {
-                                    console.log(44, e);
+
                                     e.target.src = require('./images/coin.png')
                                 }} src={require('./images/coin.png')}/></a>
                             </li>
                         </ul>
-
+                        <div className={`moreBox ${this.state.action?'exchangeList1':''}`}>
+                            <div className="cir"></div>
+                            <div className="cir"></div>
+                            <div className="cir"></div>
+                            <div className="more">
+                                more
+                            </div>
+                        </div>
                     </div>
                 </a>
 
@@ -359,20 +407,20 @@ class App extends Component {
                             </div>
                         </div>
                         <div className='logoBox'>
-                            <ul className={'exchangeList'}>
-
-                                <li>
-                                    <a href="http://www.zju.edu.cn/"
-                                       target="view_window">< img src={require('./images/1.png')}/></a>
-                                </li>
-                                <li>
-                                    <a href="http://www.fudan.edu.cn/2016/index.html"
-                                       target="view_window">< img src={require('./images/2.png')}/></a>
-                                </li>
+                            <ul className={`exchangeList ${this.state.action1?'exchangeList2':''}`}>
 
                                 <li>
                                     <a href="http://www.ox.ac.uk/"
                                        target="view_window">< img src={require('./images/3.png')}/></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.imperial.ac.uk/"
+                                       target="view_window">< img src={require('./images/11.png')}/></a>
+                                </li>
+
+                                <li>
+                                    <a href=" https://warwick.ac.uk/"
+                                       target="view_window">< img src={require('./images/9.png')}/></a>
                                 </li>
                                 <li>
                                     <a href="https://www.hku.hk/"
@@ -383,24 +431,24 @@ class App extends Component {
                                        target="view_window">< img src={require('./images/5.png')}/></a>
                                 </li>
                                 <li>
+                                    <a href="http://www.zju.edu.cn/"
+                                       target="view_window">< img src={require('./images/1.png')}/></a>
+                                </li>
+                                <li>
                                     <a href="http://www.jpmorganchina.com.cn/country/CN/zh/jpmorgan"
                                        target="view_window">< img src={require('./images/6.png')}/></a>
                                 </li>
                                 <li>
-                                    <a href="http://www.cs.ecitic.com/newsite/"
-                                       target="view_window">< img src={require('./images/7.png')}/></a>
+                                    <a href="http://www.morganstanley.com/"
+                                       target="view_window">< img src={require('./images/10.png')}/></a>
                                 </li>
                                 <li>
-                                    <a href="https://www.ml.com/"
+                                    <a href=" https://www.ml.com/"
                                        target="view_window">< img src={require('./images/8.png')}/></a>
                                 </li>
                                 <li>
-                                    <a href="https://warwick.ac.uk/"
-                                       target="view_window">< img src={require('./images/9.png')}/></a>
-                                </li>
-                                <li>
-                                    <a href="http://www.morganstanley.com/"
-                                       target="view_window">< img src={require('./images/10.png')}/></a>
+                                    <a href="http://www.cs.ecitic.com/newsite/"
+                                       target="view_window">< img src={require('./images/7.png')}/></a>
                                 </li>
                             </ul>
                         </div>
@@ -449,9 +497,9 @@ class App extends Component {
                                             })
                                         }} type="text"/>
                                     </div>
-                                    <button className="button"
+                                    <button className={`button ${this.state.color}`}
                                             onClick={() => this.submit()} disabled={!this.state.disable}>
-                                        {lang.fifthPartSend}
+                                        {lang[this.state.word]}
                                     </button>
                                 </div>
                             </div>

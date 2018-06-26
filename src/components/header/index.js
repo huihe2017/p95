@@ -33,18 +33,16 @@ class Header extends React.Component {
 
 
     choceType() {
-        console.log(window.location.hash);
 
-            console.log(222);
             this.setState({position: 'absolute'})
             this.setState({otherStyle: false})
             let dance = document.body.clientWidth * 0.46
             let danceCopy = dance
             window.onscroll = null
             window.onscroll = (e) => {
-                //console.log(document.body.scrollTop)
+                // console.log(document.documentElement.scrollTop)
+                this.props.scroll(document.documentElement.scrollTop)
                 var oTop = document.body.scrollTop == 0 ? document.documentElement.scrollTop : document.body.scrollTop;
-                console.log(oTop);
                 if (oTop < danceCopy) {
                     this.setState({position: 'absolute'})
                     this.setState({otherStyle: false})

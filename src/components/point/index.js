@@ -16,10 +16,8 @@ class Point extends Component {
                         </div>
                     </div>
                     </a>
-
                     <a className='point2' href={'/#sectionThree'}>
                         <div className='itemWrap '>
-
                             <div className="flexWrap">
                                 <div className="imgWrap"><img src={require('./point.png')}/></div>
                                 <div className="pWrap"><p className={`p ${this.props.language == 'en' ?'p1':'p2'}`}>{this.props.lang.thirdPartTL}{this.props.language=='en'?' ':''}{this.props.lang.thirdPartTR}</p></div>

@@ -1,7 +1,15 @@
+*{
+    font-family: Calibri,'Calibri11';
+}
+@font-face {
+    font-family: 'Calibri11';
+    src: url('./font/calibri.ttf') format('embedded-opentype'), /* IE6-IE8 */
+    url('./font/calibri.ttf')  format('truetype')/* Safari, Android, iOS */
+}
 html,
 body {
     margin: 0;
-    font-family: Calibri;
+
 }
 
 html {
@@ -122,6 +130,7 @@ button {
     display: block;
     line-height: 24px;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .secongContentBC {
@@ -178,7 +187,7 @@ button {
 }
 .thirdContentCBox {
     width: 100%;
-    margin-top: 25px;
+    margin-top: 50px;
 }
 .thirdContentCBox:after{
     display: block;
@@ -191,8 +200,8 @@ button {
     text-align: center;
     color: #fff;
     font-size: 24px;
-    font-weight: lighter;
-    margin-right: 106px;
+    font-weight: bold;
+    margin-right: 80px;
 }
 .thirdContentCBoxC1 {
     width: 25%;
@@ -210,34 +219,46 @@ button {
     width:240px;
     height: 244px;
 }
+.moreBox{
+    opacity: 0;
+}
+.exchangeList:after{
+    display: block;
+    clear: both;
+    content: '';
+}
 .thirdContent .exchangeList li a img{
     margin: 20px;
-
+    transition: width 0.3s;
 }
 
 .thirdContent .exchangeList li a img:hover  {
-    margin: 0;
-    width:240px;
+    margin: 18px;
+    width:204px;
 
 }
-.thirdContent .exchangeList li:nth-child(1){
+.thirdContent .exchangeList1 li:nth-child(1){
     animation: toOne 0.3s ease 0s;
     animation-fill-mode: forwards;
 }
-.thirdContent .exchangeList li:nth-child(2){
+.thirdContent .exchangeList1 li:nth-child(2){
     animation: toOne 0.3s ease 0.6s;
     animation-fill-mode: forwards;
 }
-.thirdContent .exchangeList li:nth-child(3){
+.thirdContent .exchangeList1 li:nth-child(3){
     animation: toOne 0.3s ease 0.9s;
     animation-fill-mode: forwards;
 }
-.thirdContent .exchangeList li:nth-child(4){
+.thirdContent .exchangeList1 li:nth-child(4){
     animation: toOne 0.3s ease 1.2s;
     animation-fill-mode: forwards;
 }
-.thirdContent .exchangeList li:nth-child(5){
+.thirdContent .exchangeList1 li:nth-child(5){
     animation: toOne 0.3s ease 1.5s;
+    animation-fill-mode: forwards;
+}
+.moreBox.exchangeList1{
+    animation: toOne 0.3s ease 1.8s;
     animation-fill-mode: forwards;
 }
 @keyframes toOne {
@@ -251,9 +272,9 @@ button {
 .Hline{
     width: 560px;
     height: 2px;
-    background-color: #fff;
+    background-color: rgba(255,255,255,0.5);
     margin: 0 auto;
-    margin-top: 90px;
+    margin-top: 70px;
 }
 .thirdContentCC{
     width: 100%;
@@ -263,7 +284,21 @@ button {
     text-align: center;
     margin-top: 50px;
 }
-
+.cir{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.5);
+    margin: 0 auto;
+    margin-bottom: 14px;
+}
+.more{
+    margin: 0 auto;
+    text-align: center;
+    color: rgba(255,255,255,0.5);
+    font-size: 30px;
+    font-weight: bold;
+}
 .fourth {
     height: auto;
     background-color: #FAFAFA;
@@ -292,6 +327,7 @@ button {
     font-size: 24px;
     line-height: 30px;
     margin-bottom: 50px;
+    font-weight: bold;
 }
 
 .fourthContentLi {
@@ -327,7 +363,7 @@ button {
 }
 .fourthContentLiCHS {
     color: #989898;
-    font-size: 18px;
+    font-size: 20px;
     float: left;
     font-weight: bold;
 }
@@ -350,7 +386,7 @@ button {
     width: 950px;
     margin-top: 14px;
     color: #989898;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 20px;
 }
 .fourthContent .exchangeList li{
@@ -358,60 +394,64 @@ button {
     list-style-type: none;
     opacity: 0;
     width: 200px;
-    height: 156px;
+    height: 94px;
 }
 .fourthContent .exchangeList li a{
-
+    width: 200px;
+    height: 152px;
+    display: block;
 }
 
 .fourthContent .exchangeList li a img{
     margin: 40px;
     filter: grayscale(100%);
+    width:120px;
 }
 
 .fourthContent .exchangeList li a img:hover  {
-    margin: 35px;
-    width:130px;
+    margin: 38px;
+    width:124px;
     filter: grayscale(0%);
 }
 
-.fourthContent .exchangeList li:nth-child(1){
+
+.fourthContent .exchangeList2 li:nth-child(1){
     animation: toOne 0.3s ease 0s;
     animation-fill-mode: forwards;
 }
-.fourthContent .exchangeList li:nth-child(2){
+.fourthContent .exchangeList2 li:nth-child(2){
     animation: toOne 0.3s ease 0.6s;
     animation-fill-mode: forwards;
 }
-.fourthContent .exchangeList li:nth-child(3){
+.fourthContent .exchangeList2 li:nth-child(3){
     animation: toOne 0.3s ease 0.9s;
     animation-fill-mode: forwards;
 }
-.fourthContent .exchangeList li:nth-child(4){
+.fourthContent .exchangeList2 li:nth-child(4){
     animation: toOne 0.3s ease 1.2s;
     animation-fill-mode: forwards;
 }
-.fourthContent .exchangeList li:nth-child(5){
+.fourthContent .exchangeList2 li:nth-child(5){
     animation: toOne 0.3s ease 1.5s;
     animation-fill-mode: forwards;
 }
-.fourthContent .exchangeList li:nth-child(6){
+.fourthContent .exchangeList2 li:nth-child(6){
     animation: toOne 0.3s ease 1.8s;
     animation-fill-mode: forwards;
 }
-.fourthContent .exchangeList li:nth-child(7){
+.fourthContent .exchangeList2 li:nth-child(7){
     animation: toOne 0.3s ease 2.1s;
     animation-fill-mode: forwards;
 }
-.fourthContent .exchangeList li:nth-child(8){
+.fourthContent .exchangeList2 li:nth-child(8){
     animation: toOne 0.3s ease 2.4s;
     animation-fill-mode: forwards;
 }
-.fourthContent .exchangeList li:nth-child(9){
+.fourthContent .exchangeList2 li:nth-child(9){
     animation: toOne 0.3s ease 2.7s;
     animation-fill-mode: forwards;
 }
-.fourthContent .exchangeList li:nth-child(10){
+.fourthContent .exchangeList2 li:nth-child(10){
     animation: toOne 0.3s ease 3.0s;
     animation-fill-mode: forwards;
 }
@@ -433,7 +473,7 @@ button {
 }
 .logoBox{
     width: 1200px;
-    margin-top: 10px;
+    margin-top: 40px;
 }
 .logoBox:after{
     display: block;
@@ -564,7 +604,7 @@ button {
     width: 200px;
     height: 60px;
     line-height: 60px;
-    background-color: #5262ff;
+
     color: #FFF;
     text-align: center;
     font-weight: bold;
@@ -573,7 +613,18 @@ button {
     cursor: pointer;
     border: none;
     padding: 0;
+    outline: none;
 }
+.nor{
+    background-color: #5262ff;
+}
+.nor1{
+    background-color: #7fd5ac;
+}
+.nor2{
+    background-color: #f49193;
+}
+
 .button:hover{
     opacity: 0.7;
     transition: all 0.5s, 0.5s ease-out
@@ -585,9 +636,14 @@ button {
 
 @media screen and (max-width: 750px) {
     .first {
-        background-image: url("./images/bannerM.png");
         height: 195px;
         background-size: cover;
+    }
+    .bg {
+        background-image: url("./images/bannerM.png");
+    }
+    .bgC {
+        background-image: url("./images/bannerMc.png");
     }
     .pointBox{
        display: none;
@@ -657,23 +713,24 @@ button {
         line-height: 24px;
 
     }
-
+    .thirdContentCBox{
+        margin-top: 30px;
+    }
     .thirdContentCBoxC {
         display: block;
         width: 100%;
         text-align: center;
         color: #fff;
         font-size: 16px;
-        font-weight: lighter;
-        margin-bottom: 0px;
+        margin-bottom: 10px;
     }
     .thirdContentCBoxC1{
         font-size: 14px;
     }
     .Hline{
         width: 80%;
-        height: 2px;
-        background-color: #fff;
+        height: 1px;
+        background-color: rgba(250,250,250,0.5);
         margin: 0 auto;
         margin-top: 30px;
     }
@@ -696,6 +753,9 @@ button {
         width: 50%;
         height: 120px;
     }
+    .thirdContent .exchangeList li{
+        opacity: 1;
+    }
     .thirdContent .exchangeList li a{
         display: block;
         margin: 0 auto;
@@ -712,7 +772,19 @@ button {
         height: 100px;
 
     }
+    .cir{
+        width: 6px;
+        height: 6px;
 
+    }
+    .more{
+
+        font-size: 24px;
+
+    }
+    .moreBox{
+        opacity: 1;
+    }
     .fourth {
         height: auto;
         padding-bottom: 40px;
@@ -766,9 +838,12 @@ button {
 
         width: 50%;
         height: 100px;
+        opacity: 1;
     }
+
     .fourthContent .exchangeList li a{
         display: block;
+        width: 100%;
     }
     .fourthContent .exchangeList li a img{
         display: block;
