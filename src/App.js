@@ -180,6 +180,7 @@ class App extends Component {
         this.setState({
             word: 'fifthPartSend',
             color:'nor',
+            disable:true
         })
         if ((this.state.message) && (/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/.test(this.state.email)) && (/^[A-Za-z\u4e00-\u9fa5]+$/.test(this.state.name))) {
             this.setState({
