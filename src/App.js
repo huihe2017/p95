@@ -412,44 +412,44 @@ class App extends Component {
 
                                 <li>
                                     <a href="http://www.ox.ac.uk/"
-                                       target="view_window">< img src={require('./images/3.png')}/></a>
+                                       target="view_window">< img src={require('./images/ox.png')}/></a>
                                 </li>
                                 <li>
                                     <a href="https://www.imperial.ac.uk/"
-                                       target="view_window">< img src={require('./images/11.png')}/></a>
+                                       target="view_window">< img src={require('./images/ic.png')}/></a>
                                 </li>
 
                                 <li>
                                     <a href=" https://warwick.ac.uk/"
-                                       target="view_window">< img src={require('./images/9.png')}/></a>
+                                       target="view_window">< img src={require('./images/ww.png')}/></a>
                                 </li>
                                 <li>
                                     <a href="https://www.hku.hk/"
-                                       target="view_window">< img src={require('./images/4.png')}/></a>
+                                       target="view_window">< img src={require('./images/hk.png')}/></a>
                                 </li>
                                 <li>
                                     <a href="http://www.tsinghua.edu.cn/publish/thu2018/index.html"
-                                       target="view_window">< img src={require('./images/5.png')}/></a>
+                                       target="view_window">< img src={require('./images/qh.png')}/></a>
                                 </li>
                                 <li>
                                     <a href="http://www.zju.edu.cn/"
-                                       target="view_window">< img src={require('./images/1.png')}/></a>
+                                       target="view_window">< img src={require('./images/zj.png')}/></a>
                                 </li>
                                 <li>
                                     <a href="http://www.jpmorganchina.com.cn/country/CN/zh/jpmorgan"
-                                       target="view_window">< img src={require('./images/6.png')}/></a>
+                                       target="view_window">< img src={require('./images/jp.png')}/></a>
                                 </li>
                                 <li>
                                     <a href="http://www.morganstanley.com/"
-                                       target="view_window">< img src={require('./images/10.png')}/></a>
+                                       target="view_window">< img src={require('./images/ms.png')}/></a>
                                 </li>
                                 <li>
                                     <a href=" https://www.ml.com/"
-                                       target="view_window">< img src={require('./images/8.png')}/></a>
+                                       target="view_window">< img src={require('./images/ml.png')}/></a>
                                 </li>
                                 <li>
                                     <a href="http://www.cs.ecitic.com/newsite/"
-                                       target="view_window">< img src={require('./images/7.png')}/></a>
+                                       target="view_window">< img src={require('./images/zx.png')}/></a>
                                 </li>
                             </ul>
                         </div>
