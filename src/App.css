@@ -160,6 +160,7 @@ button {
     height: 1000px;
     background-position: center;
     display: block;
+    width: 100%;
 }
 
 .thirdContent {
@@ -304,6 +305,7 @@ button {
     background-color: #FAFAFA;
     display: block;
     padding-bottom: 60px;
+    width: 100%;
 }
 
 .fourthContent {
@@ -398,12 +400,13 @@ button {
 }
 .fourthContent .exchangeList li a{
     width: 200px;
-    height: 152px;
+    height: auto;
     display: block;
 }
 
 .fourthContent .exchangeList li a img{
     margin: 40px;
+    margin-bottom: 0;
     filter: grayscale(100%);
     width:120px;
 }
@@ -507,6 +510,7 @@ button {
     height: 1000px;
     background-color: #fff;
     display: block;
+    width: 100%;
 }
 
 .fifthContent{
@@ -633,7 +637,88 @@ button {
     opacity: 0.5;
     cursor: no-drop;
 }
+@media only screen and (min-width: 750px) and (max-width: 1240px) {
+    .first {
+        width: 100%;
+        background-size: cover;
+        height: 670px;
+    }
+    .pointBox{
+        display: none;
+    }
+    .secongContent {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    .secongContentBC1{
+        width: 100%;
+    }
+    .secongContentBC2{
+        width: 100%;
+    }
+    .third{
+        height: auto;
+        padding-bottom: 40px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .thirdContent{
+        width: 100%;
+        padding: 0 20px;
+        padding-top: 100px;
+    }
+    .thirdContentCBoxC{
+        width: 50%;
+        margin-right: 0;
+    }
+    .fourthContent {
+        width:100%;
+        padding: 0 20px;
+        padding-top: 40px;
+    }
+    .logoBox{
+        width: 100%;
+        margin-top: 40px;
+    }
+    .fifthContent{
+        width: 100%;
+    }
+    .fifthContentCLTA{
 
+        width: 100%;
+
+    }
+    .fifthContentCL{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .fifthContentCR{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .fifthContentCLTI{
+
+        width: 100%;
+
+    }
+    .fifthContentCLTBox1{
+        width: 54%;
+    }
+    .fourthContentLiCC{
+        width: 100%;
+    }
+    .fifthContentCLTID{
+
+        width: 100%;
+
+    }
+    .button{
+
+        width: 40%;
+
+    }
+}
 @media screen and (max-width: 750px) {
     .first {
         height: 195px;

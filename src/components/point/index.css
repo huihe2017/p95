@@ -134,7 +134,12 @@
 .p2{
     font-size: 20px;
 }
-
+.point3 .pWrap{
+    width: 200px;
+}
+.point3 .pWrap .p{
+    width: 200px;
+}
 .allWrap .pLast {
     opacity: 0;
     font-size: 16px;
@@ -162,5 +167,12 @@
 .allWrap .itemWrap:hover .pLast {
     opacity: 1;
     transition: opacity 0.5s
+}
+@media screen and (min-width: 1200px) {
+    .allWrap .point3 {
+        top: 729px;
+        left: 958px;
+
+    }
 }
 

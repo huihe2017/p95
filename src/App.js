@@ -182,7 +182,7 @@ class App extends Component {
             color:'nor',
             disable:true
         })
-        if ((this.state.message) && (/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/.test(this.state.email)) && (/^[A-Za-z\u4e00-\u9fa5]+$/.test(this.state.name))) {
+        if ((this.state.message) && (/^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/.test(this.state.email)) && (/^[A-Za-z\u4e00-\u9fa5]+$/.test(this.state.name))) {
             this.setState({
                 disable: true
             })

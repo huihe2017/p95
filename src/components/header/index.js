@@ -31,9 +31,7 @@ class Header extends React.Component {
         // return true
     }
 
-
     choceType() {
-
             this.setState({position: 'absolute'})
             this.setState({otherStyle: false})
             let dance = document.body.clientWidth * 0.46
