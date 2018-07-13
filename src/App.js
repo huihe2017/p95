@@ -42,13 +42,16 @@ const en =
         fifthPartTC: 'Us',
         fifthPartTP: 'Partnership and Careers',
         fifthPartAddress: 'Level 6, Champion Tower, Three Garden Road, Central, Hong Kong SAR',
-        fifthPartAddressB: 'E-mail us at:',
+        fifthPartAddressB: 'E-mail us at : ',
         fifthPartFT: 'YOUR MASSAGE',
         fifthPartST: 'YOUR EMAIL',
         fifthPartTT1: 'YOUR NAME',
         fifthPartSend: 'SEND',
         fifthPartSendS: 'SENT SUCCESSFULLY',
         fifthPartSendF: 'UNABLE TO SEND ',
+        sixPartTT: 'Execution ',
+        sixPartTC: 'Services',
+        sixPartC: "Point95 Global's mission is to offer the best execution that reduces market impact to a minimum. And we continually invest in the development of our execution algorithms to meet industry best execution standards − all while providing customized solutions that our clients need. For example, we help clients with the execution of block trades including buy/sell major cryptocurrencies like BTC, ETH and altcoins. Our trading expertise and comprehensive customer service make Point95 Global the best financial institution for your execution needs.",
     }
 
 const ch =
@@ -67,7 +70,7 @@ const ch =
         thirdPartT: '做市商业务',
         thirdPartTL: '做市商',
         thirdPartTR: '业务',
-        thirdPartTP: '专注于数字资产管理',
+        thirdPartTP: '提供最佳的做市商服务',
         thirdPartC: 'Point95 Global 致力于提供优质的做市商服务，其中包括提供：',
         thirdPartCP1: '交易市场流动性管理',
         thirdPartCP2: '稳定市值价格',
@@ -97,6 +100,9 @@ const ch =
         fifthPartSend: '发送',
         fifthPartSendS: '发送成功',
         fifthPartSendF: '发送失败',
+        sixPartTT: '交易执行',
+        sixPartTC: '服务',
+        sixPartC: "Point95 Global的使命是为客户提供出色的交易执行服务，从而将市场影响降低到最低限度。我们不断投入于交易执行算法的开发，不断创新和升级以达到业界的最高标准为目的。同时我们会根据客户的需要，为其提供私人订制的解决方案。例如，我们可以帮助客户执行大宗交易，包括买卖比特币，以太币和其他数字货币。专业的交易知识和完善的客户服务使Point95 Global将成为您的最佳选择。",
     }
 
 
@@ -116,15 +122,15 @@ class App extends Component {
     }
 
     scroll(e) {
-
+        e = e || window.event;
+        // console.log(e);
         if(e>1800){
-            // alert(1)
             this.setState({
                 action:true
             })
         }
-        if(e>2940){
-            // alert(1)
+        if(e>3940){
+
             this.setState({
                 action1:true
             })
@@ -346,7 +352,18 @@ class App extends Component {
                         </div>
                     </div>
                 </a>
-
+                <a className='six' name="sectionSix">
+                    <div className="sixthContent">
+                        <span className="sixthContenT">
+                            {lang.sixPartTT} <span style={{color:'#5262ff'}}>{lang.sixPartTC}</span>
+                        </span>
+                        <img className="sixthContenI" src={require('./images/yinhao.png')} alt=""/>
+                        <span className={`sixthContenC ${this.state.lang === 'en' ? 'sixthContenC1' : 'sixthContenC2'}`}>
+                             {lang.sixPartC}
+                        </span>
+                        <img className="sixthContenIB" src={require('./images/blackboardA.png')} alt=""/>
+                    </div>
+                </a>
                 <a className='fourth' name="sectionFour">
                     <div className="fourthContent">
                                 <span className="fourthHeaderT">
@@ -458,8 +475,7 @@ class App extends Component {
                 <a className='fifth' name="sectionFive">
                     <div className="fifthContent">
                         <span className="fifthHeaderT">
-                            {lang.fifthPartTT}{this.state.lang == 'en' ? ' ' : ''}<span
-                            style={{color: '#5262ff'}}>{lang.fifthPartTC}</span>
+                            {lang.fifthPartTT}{this.state.lang == 'en' ? ' ' : ''}<span>{lang.fifthPartTC}</span>
                         </span>
                         <span className="fifthHeaderC">
                             {lang.fifthPartAddress}<br/>

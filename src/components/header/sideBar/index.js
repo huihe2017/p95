@@ -52,6 +52,12 @@ class SideBar extends Component {
                         }}>{this.props.lang.thirdPartT}
                         </div>
                     </a>
+                    <a href="#sectionSix">
+                        <div className='sideBarA' onClick={ ()=> {
+                           this.checkedForPath()
+                        }}>{this.props.lang.sixPartTT}{this.props.language=='en'?' ':''}{this.props.lang.sixPartTC}
+                        </div>
+                    </a>
                     <a href="#sectionFour">
                         <div className='sideBarA' onClick={() => {
                             this.checkedForPath()
