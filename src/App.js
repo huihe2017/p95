@@ -357,11 +357,11 @@ class App extends Component {
                         <span className="sixthContenT">
                             {lang.sixPartTT} <span style={{color:'#5262ff'}}>{lang.sixPartTC}</span>
                         </span>
-                        <img className="sixthContenI" src={require('./images/yinhao.png')} alt=""/>
+                        <img className="sixthContenIB" src={require('./images/black.png')} alt=""/>
                         <span className={`sixthContenC ${this.state.lang === 'en' ? 'sixthContenC1' : 'sixthContenC2'}`}>
                              {lang.sixPartC}
                         </span>
-                        <img className="sixthContenIB" src={require('./images/blackboardA.png')} alt=""/>
+                        <img className="sixthBg" src={require('./images/sixBg.png')} alt=""/>
                     </div>
                 </a>
                 <a className='fourth' name="sectionFour">
