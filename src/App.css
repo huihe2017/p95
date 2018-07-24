@@ -273,6 +273,14 @@ button {
         opacity: 1;
     }
 }
+@keyframes toTwo {
+    from {
+        right: -640px;
+    }
+    to {
+        right: 0;
+    }
+}
 .Hline{
     width: 560px;
     height: 2px;
@@ -307,14 +315,14 @@ button {
     height: auto;
     background-color: #fff;
     display: block;
-    padding-bottom: 60px;
+    padding-bottom: 100px;
     width: 100%;
 }
 
 .fourthContent {
     width: 1200px;
     margin: 0 auto;
-    padding-top: 40px;
+    padding-top: 100px;
 }
 
 .fourthHeaderT {
@@ -331,8 +339,8 @@ button {
     color: #3B3D40;
     font-size: 24px;
     line-height: 30px;
-    margin-bottom: 50px;
-    font-weight: bold;
+    margin-bottom: 80px;
+    /*font-weight: bold;*/
 }
 
 .fourthContentLi {
@@ -461,6 +469,14 @@ button {
     animation: toOne 0.3s ease 3.0s;
     animation-fill-mode: forwards;
 }
+.fourthContent .exchangeList2 li:nth-child(11){
+    animation: toOne 0.3s ease 3.3s;
+    animation-fill-mode: forwards;
+}
+.fourthContent .exchangeList2 li:nth-child(12){
+    animation: toOne 0.3s ease 3.6s;
+    animation-fill-mode: forwards;
+}
 
 @font-face {
     font-family: 'iconfont';  /* project id 717126 */
@@ -479,7 +495,7 @@ button {
 }
 .logoBox{
     width: 1200px;
-    margin-top: 40px;
+    margin-top: 60px;
 }
 .logoBox:after{
     display: block;
@@ -650,6 +666,7 @@ button {
     background-color: #FAFAFA;
     color: #3B3D40;
     position:relative;
+    overflow: hidden;
 }
 .sixthContent{
     width: 1200px;
@@ -669,9 +686,8 @@ button {
 }
 .sixthContenC{
     display: block;
-    width: 60%;
-    font-weight: bold;
-    line-height: 36px;
+    width: 70%;
+    line-height: 32px;
     margin-top: 6px;
 }
 .sixthContenIB{
@@ -692,9 +708,13 @@ button {
 }
 .sixthBg{
     position: absolute;
-    right: 0;
+    right: -640px;
     bottom: 0;
     height: 75%;
+}
+.sixthBg1{
+    animation: toTwo 0.3s ease 1.2s;
+    animation-fill-mode: forwards;
 }
 @media only screen and (min-width: 750px) and (max-width: 1240px) {
     .first {
@@ -734,7 +754,7 @@ button {
     .fourthContent {
         width:100%;
         padding: 0 20px;
-        padding-top: 40px;
+        padding-top: 100px;
     }
     .logoBox{
         width: 100%;
@@ -804,7 +824,6 @@ button {
     .sixthContenC{
         display: block;
 
-        font-weight: bold;
         line-height: 32px;
         margin-top: 6px;
     }
@@ -827,7 +846,7 @@ button {
 
 
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
     .sixthBg{
         display: none;
     }
@@ -1171,7 +1190,6 @@ button {
     .sixthContenC{
         display: block;
         width: 100%;
-        font-weight: bold;
         line-height: 20px;
         margin-top: 20px;
     }

@@ -31,13 +31,16 @@ const en =
         fourthPartTC: "Point95 Global’s management team with an average 10+ years of experience to manage clients’ digital asset portfolios and run quantitative trading strategies.",
         fourthFPartCT: 'Jingyuan Ye,  CFA',
         fourthFPartCTN: 'CEO and Co-Founder',
-        fourthFPartCC: 'Jingyuan has over 10 years of experience in trading and portfolio management. Prior to assuming his current role, he served as the CEO of PPS International (Holdings) Ltd (a HK listed company). Prior to that, he joined Bank of America Merrill Lynch in London 2007 and was the Vice President of Global Market Division, where he was responsible for the risk and portfolio management of Equity Structured Products for EMEA. He is a Chartered Financial Analyst (CFA), and received a BSc (Hons) in Mathematics, Operational Research, Statistics and Economics from University of Warwick, United Kingdom, and an MSc in Applied Statistics from University of Oxford, United Kingdom.',
+        fourthFPartCC: "Jingyuan has over 10 years of experience in trading and portfolio management. Prior to assuming his current role, he served as the CEO of PPS International (Holdings) Ltd (a HK listed company). Prior to that, he joined Bank of America Merrill Lynch's London office in 2007 and was the Vice President of Global Market Division, where he was responsible for the risk and portfolio management of Equity Structured Products for EMEA. He is a Chartered Financial Analyst (CFA), and received a BSc (Hons) in Mathematics, Operational Research, Statistics and Economics from University of Warwick, United Kingdom, and a MSc in Applied Statistics from University of Oxford, United Kingdom.",
         fourthSPartCT: 'Lin Cheung',
-        fourthSPartCTN: 'COO and Co-Founder',
-        fourthSPartCC: "Lin has more than 10 years of experience in trading technology and operation. Previously he was a senior vice president of JPMorgan Chase and responsible for managing an application development team covering Asian electronic trading business across multiple asset classes. He received Masters' and Bachelor's degree in Computer Science from the University of Hong Kong.",
+        fourthSPartCTN: 'CBO and Co-Founder',
+        fourthSPartCC: "Lin has more than 10 years of experience in trading technology and operations. Previously he was a senior vice president at JPMorgan Chase and responsible for managing an application development team covering Asian electronic trading business across multiple asset classes. He received Master's and Bachelor's degrees in Computer Science from the University of Hong Kong.",
         fourthTPartCT: 'Mike Wang',
         fourthTPartCTN: 'CIO and Co-Founder ',
         fourthSTPartCC: "Mike has extensive experience in quantitative trading. He was a director of CITIC Securities and responsible for managing quantitative strategies, market-making strategies and arbitrage strategies in stock markets. He graduated with a Master’s degree in Computer Science from Zhejiang University, China.",
+        fourthFoPartCT: 'Defmond Hung',
+        fourthFoPartCTN: 'COO and Co-Founder',
+        fourthFoTPartCC: 'Defmond has over 20 years of global financial services experience across front-to-back technology, transformation management, regulatory & compliance controls, financial management, and global operations. Previous leadership roles he has held include COO & Head of Regulatory Controls of Asia Equities Technology at JPMorgan Chase, Head of IT at Morgan Stanley Bank International (China), Head of Asia-ex Equities Technology at Morgan Stanley, and Head of Operations at KGI Securities.  He received a BSc in Economics from the University of Nebraska at Kearney, USA; a Master’s degree in International Management from Thunderbird School of Global Management, USA; and an EMBA from Tsinghua University, China.',
         fifthPartTT: 'Contact',
         fifthPartTC: 'Us',
         fifthPartTP: 'Partnership and Careers',
@@ -84,11 +87,14 @@ const ch =
         fourthFPartCTN: '首席执行官以及联合创始人',
         fourthFPartCC: '叶景源拥有着超过10年的交易和投资组合管理经验。他是一名特许金融分析师，在英国华威大学获得数学、运营研究、统计和经济学学士学位，在英国牛津大学获得应用统计学理学硕士学位。他于2007年在伦敦加入了美银美林(Bank of America Merrill Lynch)，并担任全球市场部门副总裁，负责EMEA股票结构性产品的风险和投资组合管理。之后，曾担任PPS国际(控股)有限公司(香港上市公司)的首席执行官。现联合创立Point95 Global并出任CEO。',
         fourthSPartCT: '张炼',
-        fourthSPartCTN: '首席运营官及联合创始人',
-        fourthSPartCC: 'Lin香港大学计算机科学硕士，拥有超过10年的金融交易技术和运营经验。此前，他是摩根大通(JPMorgan Chase)的高级副总裁，负责管理一个涵盖多个资产类别的亚洲电子交易业务的应用开发团队。现联合创立Point95 Global并出任COO。',
+        fourthSPartCTN: '首席商务官及联合创始人',
+        fourthSPartCC: 'Lin香港大学计算机科学硕士，拥有超过10年的金融交易技术和运营经验。此前，他是摩根大通(JPMorgan Chase)的高级副总裁，负责管理一个涵盖多个资产类别的亚洲电子交易业务的应用开发团队。现联合创立Point95 Global并出任CBO。',
         fourthTPartCT: 'Mike Wang',
         fourthTPartCTN: '首席投资官及联合创始人',
         fourthSTPartCC: 'Mike中国浙江大学计算机科学硕士，曾担任中信证券董事，在量化交易方面有多年的经验。在中信证券的工作中负责管理股票市场的量化策略、做市策略和套利策略。现联合创立Point95 Global并出任CIO。',
+        fourthFoPartCT: '洪亿民',
+        fourthFoPartCTN: '首席运营官及联合创始人',
+        fourthFoTPartCC: '洪亿民拥有超过20年的国际金融业务经验, 在IT的前中后端、变革管理、合规控制、财务管理和全球运营管理方面有丰富的专业知识。他曾担任的管理和领导职位包括 - 摩根大通亚州区证券科技信息部门的首席运营官及法规防治主管, 摩根士丹利国际银行(中国)的科技信息部主管, 摩根士丹利亚太区证券科技信息部主管, 凯基证券的运营主管。他分别获得美国内布拉斯加大学经济学学士、 美国雷鸟全球管理学院国际管理硕士、 北京清华大学EMBA的学位。现联合创立Point95 Global并出任COO。',
         fifthPartTT: '联系',
         fifthPartTC: '我们',
         fifthPartTP: '商务合作，人才招聘',
@@ -113,32 +119,36 @@ class App extends Component {
             disable: false,
             lang: 'en',
             name: '',
-            word:'fifthPartSend',
-            send:false,
-            success:false,
-            color:'nor'
+            word: 'fifthPartSend',
+            send: false,
+            success: false,
+            color: 'nor'
         }
-
     }
 
     scroll(e) {
         e = e || window.event;
         // console.log(e);
-        if(e>1800){
+        if (e > 1800) {
             this.setState({
-                action:true
+                action: true
             })
         }
-        if(e>3940){
+        if (e > 2500) {
+            this.setState({
+                action2: true
+            })
+        }
+        if (e > 3940) {
 
             this.setState({
-                action1:true
+                action1: true
             })
         }
     }
 
     submit() {
-        let that=this
+        let that = this
         var data = 'mail=' + this.state.email + '&userName=' + this.state.name + '&message=' + this.state.message
         fetch("https://www.p95g.com/api/user/sendmsg", {
             method: "POST",
@@ -148,26 +158,26 @@ class App extends Component {
             body: data
         }).then(res => res.json())
             .then(res => {
-            this.setState({send:true},()=>{
-                // console.log(111,this.state.send);
-            })
-            if (res.code === 0) {
-                that.setState({success:true},()=>{
-                    if(this.state.success){
-                        // console.log(222);
-                        this.setState({
-                            color:'nor1',
-                            word: 'fifthPartSendS',
-                            disable:false
-                        })
-                    }
+                this.setState({send: true}, () => {
+                    // console.log(111,this.state.send);
                 })
-            }
-        }).catch((e)=> {
+                if (res.code === 0) {
+                    that.setState({success: true}, () => {
+                        if (this.state.success) {
+                            // console.log(222);
+                            this.setState({
+                                color: 'nor1',
+                                word: 'fifthPartSendS',
+                                disable: false
+                            })
+                        }
+                    })
+                }
+            }).catch((e) => {
             this.setState({
-                color:'nor2',
+                color: 'nor2',
                 word: 'fifthPartSendF',
-                disable:false
+                disable: false
             })
         });
 
@@ -185,8 +195,8 @@ class App extends Component {
     check() {
         this.setState({
             word: 'fifthPartSend',
-            color:'nor',
-            disable:true
+            color: 'nor',
+            disable: true
         })
         if ((this.state.message) && (/^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/.test(this.state.email)) && (/^[A-Za-z\u4e00-\u9fa5]+$/.test(this.state.name))) {
             this.setState({
@@ -215,7 +225,8 @@ class App extends Component {
 
         return (
             <div id="main">
-                <Hheader scroll={this.scroll.bind(this)} language={this.state.lang} lang={lang} LangChange={this.LangChange.bind(this)}/>
+                <Hheader scroll={this.scroll.bind(this)} language={this.state.lang} lang={lang}
+                         LangChange={this.LangChange.bind(this)}/>
                 <a className={`first ${this.state.lang === 'en' ? 'bg' : 'bgC'}`} name="sectionOne">
                     <div className='pointBox'>
                         <div style={{position: 'relative'}}>
@@ -288,7 +299,7 @@ class App extends Component {
                         <div className="thirdContentCC">
                             {lang.thirdPartCC}
                         </div>
-                        <ul className={`exchangeList ${this.state.action?'exchangeList1':''}`}>
+                        <ul className={`exchangeList ${this.state.action ? 'exchangeList1' : ''}`}>
                             <li>
                                 <a href="https://www.huobi.pro/zh-cn/"
                                    target="view_window">< img onMouseEnter={(e) => {
@@ -342,7 +353,7 @@ class App extends Component {
                                 }} src={require('./images/coin.png')}/></a>
                             </li>
                         </ul>
-                        <div className={`moreBox ${this.state.action?'exchangeList1':''}`}>
+                        <div className={`moreBox ${this.state.action ? 'exchangeList1' : ''}`}>
                             <div className="cir"></div>
                             <div className="cir"></div>
                             <div className="cir"></div>
@@ -355,13 +366,15 @@ class App extends Component {
                 <a className='six' name="sectionSix">
                     <div className="sixthContent">
                         <span className="sixthContenT">
-                            {lang.sixPartTT} <span style={{color:'#5262ff'}}>{lang.sixPartTC}</span>
+                            {lang.sixPartTT} <span style={{color: '#5262ff'}}>{lang.sixPartTC}</span>
                         </span>
                         <img className="sixthContenIB" src={require('./images/black.png')} alt=""/>
-                        <span className={`sixthContenC ${this.state.lang === 'en' ? 'sixthContenC1' : 'sixthContenC2'}`}>
+                        <span
+                            className={`sixthContenC ${this.state.lang === 'en' ? 'sixthContenC1' : 'sixthContenC2'}`}>
                              {lang.sixPartC}
                         </span>
-                        <img className="sixthBg" src={require('./images/sixBg.png')} alt=""/>
+                        <img className={`sixthBg ${this.state.action2 ? 'sixthBg1' : ''}`}
+                             src={require('./images/sixBg.png')} alt=""/>
                     </div>
                 </a>
                 <a className='fourth' name="sectionFour">
@@ -392,6 +405,20 @@ class App extends Component {
                             </div>
                         </div>
                         <div className='fourthContentLi'>
+                            <img className='fourthContentLiI' src={require('./images/hong.png')} alt=""/>
+                            <div className="fourthContentLiC">
+                                <span className="fourthContentLiCH">
+                                    <span className="fourthContentLiCHS"> {lang.fourthFoPartCT} &nbsp;&nbsp;<span
+                                        className="fourthContentLiCHSL">{lang.fourthFoPartCTN}</span>
+                                    </span>
+                                </span>
+                                <span className="fourthContentLiCC">
+                                    {lang.fourthFoTPartCC}
+                                </span>
+                            </div>
+                        </div>
+
+                        <div className='fourthContentLi'>
                             <img className='fourthContentLiI' src={require('./images/lin.png')} alt=""/>
                             <div className="fourthContentLiC">
                                         <span className="fourthContentLiCH">
@@ -412,20 +439,20 @@ class App extends Component {
                         <div className='fourthContentLi'>
                             <img className='fourthContentLiI' src={require('./images/wang.png')} alt=""/>
                             <div className="fourthContentLiC">
-                                        <span className="fourthContentLiCH">
-                                            <span className="fourthContentLiCHS">{lang.fourthTPartCT} &nbsp;&nbsp;<span
-                                                className="fourthContentLiCHSL">{lang.fourthTPartCTN}</span>
-                                            </span>
-                                            <a className="fourthContentLiCHA" href="javascript:void (0)"
-                                               target="view_window"></a>
-                                        </span>
+                                <span className="fourthContentLiCH">
+                                    <span className="fourthContentLiCHS">{lang.fourthTPartCT} &nbsp;&nbsp;<span
+                                        className="fourthContentLiCHSL">{lang.fourthTPartCTN}</span>
+                                    </span>
+                                    <a className="fourthContentLiCHA" href="javascript:void (0)"
+                                       target="view_window"></a>
+                                </span>
                                 <span className="fourthContentLiCC">
-                                                {lang.fourthSTPartCC}
-                                        </span>
+                                    {lang.fourthSTPartCC}
+                                </span>
                             </div>
                         </div>
                         <div className='logoBox'>
-                            <ul className={`exchangeList ${this.state.action1?'exchangeList2':''}`}>
+                            <ul className={`exchangeList ${this.state.action1 ? 'exchangeList2' : ''}`}>
 
                                 <li>
                                     <a href="http://www.ox.ac.uk/"
@@ -467,6 +494,14 @@ class App extends Component {
                                 <li>
                                     <a href="http://www.cs.ecitic.com/newsite/"
                                        target="view_window">< img src={require('./images/zx.png')}/></a>
+                                </li>
+                                <li>
+                                    <a href="http://www.kgi.com/kgienhtml/"
+                                       target="view_window">< img src={require('./images/kgi.png')}/></a>
+                                </li>
+                                <li>
+                                    <a href="https://thunderbird.asu.edu/"
+                                       target="view_window">< img src={require('./images/tb.png')}/></a>
                                 </li>
                             </ul>
                         </div>

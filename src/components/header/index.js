@@ -39,7 +39,7 @@ class Header extends React.Component {
             window.onscroll = null
             window.onscroll = (e) => {
                 // console.log(e);
-                console.log(window.pageYOffset)
+                // console.log(window.pageYOffset)
                 this.props.scroll(window.pageYOffset)
                 var oTop = document.body.scrollTop == 0 ? document.documentElement.scrollTop : document.body.scrollTop;
                 if (oTop < danceCopy) {
