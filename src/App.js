@@ -40,7 +40,7 @@ const en =
         fourthSTPartCC: "Mike has extensive experience in quantitative trading. He was a director of CITIC Securities and responsible for managing quantitative strategies, market-making strategies and arbitrage strategies in stock markets. He graduated with a Master’s degree in Computer Science from Zhejiang University, China.",
         fourthFoPartCT: 'Defmond Hung',
         fourthFoPartCTN: 'COO and Co-Founder',
-        fourthFoTPartCC: 'Defmond has over 20 years of global financial services experience across front-to-back technology, transformation management, regulatory & compliance controls, financial management, and global operations. Previous leadership roles he has held include COO & Head of Regulatory Controls of Asia Equities Technology at JPMorgan Chase, Head of IT at Morgan Stanley Bank International (China), Head of Asia-ex Equities Technology at Morgan Stanley, and Head of Operations at KGI Securities.  He received a BSc in Economics from the University of Nebraska at Kearney, USA; a Master’s degree in International Management from Thunderbird School of Global Management, USA; and an EMBA from Tsinghua University, China.',
+        fourthFoTPartCC: 'Defmond has over 20 years of global financial services experience across front-to-back technology, transformation management, regulatory & compliance controls, financial management, and global operations. Previous leadership roles he has held include COO & Head of Regulatory Controls of Asia Equities Technology at JPMorgan Chase, Head of IT at Morgan Stanley Bank International (China), Head of Asia-ex Equities Technology at Morgan Stanley, and Head of Operations at KGI Hong Kong. He received a BSc in Economics from the University of Nebraska at Kearney, USA; a Master’s degree in International Management from Thunderbird School of Global Management, USA; and an EMBA from Tsinghua University, China.',
         fifthPartTT: 'Contact',
         fifthPartTC: 'Us',
         fifthPartTP: 'Partnership and Careers',
@@ -94,7 +94,7 @@ const ch =
         fourthSTPartCC: 'Mike中国浙江大学计算机科学硕士，曾担任中信证券董事，在量化交易方面有多年的经验。在中信证券的工作中负责管理股票市场的量化策略、做市策略和套利策略。现联合创立Point95 Global并出任CIO。',
         fourthFoPartCT: '洪亿民',
         fourthFoPartCTN: '首席运营官及联合创始人',
-        fourthFoTPartCC: '洪亿民拥有超过20年的国际金融业务经验, 在IT的前中后端、变革管理、合规控制、财务管理和全球运营管理方面有丰富的专业知识。他曾担任的管理和领导职位包括 - 摩根大通亚州区证券科技信息部门的首席运营官及法规防治主管, 摩根士丹利国际银行(中国)的科技信息部主管, 摩根士丹利亚太区证券科技信息部主管, 凯基证券的运营主管。他分别获得美国内布拉斯加大学经济学学士、 美国雷鸟全球管理学院国际管理硕士、 北京清华大学EMBA的学位。现联合创立Point95 Global并出任COO。',
+        fourthFoTPartCC: '洪亿民拥有超过20年的国际金融业务经验, 在IT的前中后端、变革管理、合规控制、财务管理和全球运营管理方面有丰富的专业知识。他曾担任的管理和领导职位包括 - 摩根大通亚州区证券科技信息部门的首席运营官及法规防治主管, 摩根士丹利国际银行(中国)的科技信息部主管, 摩根士丹利亚太区证券科技信息部主管, 凯基证券（香港）的运营主管。他分别获得美国内布拉斯加大学经济学学士、 美国雷鸟全球管理学院国际管理硕士、 北京清华大学EMBA的学位。现联合创立Point95 Global并出任COO。',
         fifthPartTT: '联系',
         fifthPartTC: '我们',
         fifthPartTP: '商务合作，人才招聘',
@@ -411,6 +411,7 @@ class App extends Component {
                                     <span className="fourthContentLiCHS"> {lang.fourthFoPartCT} &nbsp;&nbsp;<span
                                         className="fourthContentLiCHSL">{lang.fourthFoPartCTN}</span>
                                     </span>
+
                                 </span>
                                 <span className="fourthContentLiCC">
                                     {lang.fourthFoTPartCC}
@@ -442,13 +443,13 @@ class App extends Component {
                                 <span className="fourthContentLiCH">
                                     <span className="fourthContentLiCHS">{lang.fourthTPartCT} &nbsp;&nbsp;<span
                                         className="fourthContentLiCHSL">{lang.fourthTPartCTN}</span>
-                                    </span>
-                                    <a className="fourthContentLiCHA" href="javascript:void (0)"
-                                       target="view_window"></a>
-                                </span>
+                                            </span>
+                                            <a className="fourthContentLiCHA" href="javascript:void (0)"
+                                               target="view_window"></a>
+                                        </span>
                                 <span className="fourthContentLiCC">
                                     {lang.fourthSTPartCC}
-                                </span>
+                                        </span>
                             </div>
                         </div>
                         <div className='logoBox'>
