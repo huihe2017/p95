@@ -37,7 +37,7 @@ const en =
         fourthSPartCC: "Lin has more than 10 years of experience in trading technology and operations. Previously he was a senior vice president at JPMorgan Chase and responsible for managing an application development team covering Asian electronic trading business across multiple asset classes. He received Master's and Bachelor's degrees in Computer Science from the University of Hong Kong.",
         fourthTPartCT: 'Mike Wang',
         fourthTPartCTN: 'CIO and Co-Founder ',
-        fourthSTPartCC: "Mike has extensive experience in quantitative trading. He was a director of CITIC Securities and responsible for managing quantitative strategies, market-making strategies and arbitrage strategies in stock markets. He graduated with a Master’s degree in Computer Science from Zhejiang University, China.",
+        fourthSTPartCC: "Mike is a co-founder of POINT95 Global, and he has over 10 years intensive experience in quantitative trading. Before POINT95 Global, Mike was a senior director who managed quantitative trading desk in the headquarter of Guotai Junan Securities (GTJS), and responsible for the research and implementation of their machine learning based quantitative trading strategies. In this role, Mike leaded his team to design and implement GTJN’s market making and arbitrage trading strategies. He graduated with a Master’s degree in Computer Science from Zhejiang University, China. Now, he leads the implementation of algorithm trading strategy research and automated trading engine, and the research on the application of artificial intelligence in trading strategy improvements.",
         fourthFoPartCT: 'Defmond Hung',
         fourthFoPartCTN: 'COO and Co-Founder',
         fourthFoTPartCC: 'Defmond has over 20 years of global financial services experience across front-to-back technology, transformation management, regulatory & compliance controls, financial management, and global operations. Previous leadership roles he has held include COO & Head of Regulatory Controls of Asia Equities Technology at JPMorgan Chase, Head of IT at Morgan Stanley Bank International (China), Head of Asia-ex Equities Technology at Morgan Stanley, and Head of Operations at KGI Hong Kong.  He received a BSc in Economics from the University of Nebraska at Kearney, USA; a Master’s degree in International Management from Thunderbird School of Global Management, USA; and an EMBA from Tsinghua University, China.',
@@ -91,7 +91,7 @@ const ch =
         fourthSPartCC: 'Lin香港大学计算机科学硕士，拥有超过10年的金融交易技术和运营经验。此前，他是摩根大通(JPMorgan Chase)的高级副总裁，负责管理一个涵盖多个资产类别的亚洲电子交易业务的应用开发团队。现联合创立Point95 Global并出任CBO。',
         fourthTPartCT: 'Mike Wang',
         fourthTPartCTN: '首席投资官及联合创始人',
-        fourthSTPartCC: 'Mike中国浙江大学计算机科学硕士，曾担任中信证券董事，在量化交易方面有多年的经验。在中信证券的工作中负责管理股票市场的量化策略、做市策略和套利策略。现联合创立Point95 Global并出任CIO。',
+        fourthSTPartCC: 'Mike中国浙江大学计算机科学硕士, 曾就职于国内知名券商国泰君安证券总部量化交易团队，担任程序化交易经理及业务董事。负责国泰君安自营投资部门机器学习量化对冲交易策略模型的设计研发工作，主导参与过做市系统套利系统开发设计及实现。现联合创立P95，出任CIO,负责程序化交易策略实现及公司人工智能应用于交易项目研发推进。',
         fourthFoPartCT: '洪亿民',
         fourthFoPartCTN: '首席运营官及联合创始人',
         fourthFoTPartCC: '洪亿民拥有超过20年的国际金融业务经验, 在IT的前中后端、变革管理、合规控制、财务管理和全球运营管理方面有丰富的专业知识。他曾担任的管理和领导职位包括 - 摩根大通亚州区证券科技信息部门的首席运营官及法规防治主管, 摩根士丹利国际银行(中国)的科技信息部主管, 摩根士丹利亚太区证券科技信息部主管, 凯基证券（香港）的运营主管。他分别获得美国内布拉斯加大学经济学学士、 美国雷鸟全球管理学院国际管理硕士、 北京清华大学EMBA的学位。现联合创立Point95 Global并出任COO。',
@@ -411,7 +411,11 @@ class App extends Component {
                                     <span className="fourthContentLiCHS"> {lang.fourthFoPartCT} &nbsp;&nbsp;<span
                                         className="fourthContentLiCHSL">{lang.fourthFoPartCTN}</span>
                                     </span>
-
+<a className="fourthContentLiCHA"
+   href="https://www.linkedin.com/in/defmond-hung-94556a169/"
+   target="view_window"><img className="fourthContentLiCHI"
+                             src={require('./images/link.png')} alt=""/><i
+    className="iconfont">&#xe631;</i></a>
                                 </span>
                                 <span className="fourthContentLiCC">
                                     {lang.fourthFoTPartCC}
